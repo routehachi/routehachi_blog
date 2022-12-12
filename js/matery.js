@@ -138,12 +138,12 @@ $(function () {
     function showOrHideNavBg(position) {
         let showPosition = 100;
         if (position < showPosition) {
-            $nav.addClass('nav-transparent');
-            $backTop.slideUp(300);
+        //    $nav.addClass('nav-transparent');
+            $backTop.slideUp(200);
         } else {
-            $nav.removeClass('nav-transparent');
-            $backTop.slideDown(300);
-        }
+        //    $nav.removeClass('nav-transparent');
+           $backTop.slideDown(200);
+       }
     }
 
     	

@@ -39,6 +39,7 @@ body {
     color: #34495e;
     overflow-x: hidden;
     overflow-y: auto;
+    font-family: "Koruri", sans-serif;
 }
 
 h1 {
@@ -232,6 +233,14 @@ mark {
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
 }
 
+.card-dream {
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+    background: linear-gradient(347deg, #fff8de, #fff6d5, #ffefc0, #ffe6a4, #ffda89, #ffcf74, #ffcb6b);
+    padding: 20px 0px 0px 0px;
+    outline: 3px solid #14080081;
+}
+
 .card .card-image img {
     border-radius: 8px 8px 0 0;
     /* 修改文章列表图片填充样式为 cover 以覆盖整个区域而不会被缩放 */
@@ -383,7 +392,7 @@ header .side-nav .social-link {
     font-size: 1rem;
     color: #fff;
     border: 1px solid #fff;
-    background-color: transparent;
+    background-color: #222;
     border-radius: 30px;
     box-shadow: none;
 }
@@ -542,10 +551,20 @@ header .go-back i {
     background-position: center center;
     background-size: cover;
     transform: translate3d(0px, 0px, 0px);
+    text-shadow: 10px 10px 20px #000000;
+}
+
+.bg-cover .link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .index-cover {
-    height: 100vh;
+    height: 95vh;
 }
 
 .post-cover {
@@ -553,7 +572,8 @@ header .go-back i {
 }
 
 .bg-cover:after {
-/*    -webkit-animation: rainbow 60s infinite;
+    background-color: rgba(0, 0, 0, 0);
+    /* -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite; */
 }
 
@@ -571,6 +591,7 @@ header .go-back i {
 
 .bg-cover .container {
     position: relative;
+    top: 300px;
     color: #fff;
     z-index: 2;
 }
@@ -707,6 +728,7 @@ header .go-back i {
     margin-bottom: 20px;
     font-size: 2rem;
     font-weight: 700;
+    filter: drop-shadow(0px 0px 5px #0000006c);
 }
 
 .dream .text {
@@ -1836,7 +1858,7 @@ footer {
 }
 
 footer .social-statis {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     position: relative;
 }
 
@@ -1906,17 +1928,18 @@ p.search-result-summary{
     bottom: 15px;
     padding-top: 15px;
     margin-bottom: 0;
+    padding-bottom: 24px;
     z-index: 998;
 }
 
 .top-scroll .btn-floating {
     background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%);
-    width: 48px;
-    height: 48px;
+    width: 72px;
+    height: 72px;
 }
 
 .top-scroll .btn-floating i {
-    line-height: 48px;
+    line-height: 70px;
     font-size: 1.8rem;
 }
 
@@ -2060,6 +2083,7 @@ p.search-result-summary{
     border-radius: 5px;
     color: #000;
 }
+
 
 .nav-show i[aria-hidden=true] {
     -webkit-transform: rotate(180deg) !important;
