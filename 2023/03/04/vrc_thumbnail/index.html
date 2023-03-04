@@ -4,10 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="はろーにゅーわー, routehachi">
+    <meta name="keywords" content="Canvasを使ってVRCのアバターサムネイルに画像を差し込む, routehachi">
     <meta name="robots" content="noindex,noarchive,nofollow,noimageindex">
-    <meta name="description" content="引っ越しました弊ブログはWordpressからHexo（ここ）に引っ越しました！なお、Wordpressのブログに関しては閉鎖を予定しています。有用そうな記事はこちらのほうに移植する予定です。
-ブログのテーマにMateryを利用しています。">
+    <meta name="description" content="サムネイルに使用する画像を用意する 
+画像を用意して、任意のAssetsフォルダに画像を突っ込みます。
+画像のインポート設定 
+Texture TypeをSprite (2D and UI) 、FormatをRGBA 32 bit にします">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +23,7 @@
 
     
 
-    <title>はろーにゅーわー | routehachi</title>
+    <title>Canvasを使ってVRCのアバターサムネイルに画像を差し込む | routehachi</title>
     <link rel="icon" type="image/png" href="/routehachi_blog/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/routehachi_blog/libs/awesome/css/all.min.css">
@@ -139,12 +141,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/routehachi_blog/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/routehachi_blog/medias/images/vrcthumb9.png')">
     <div class="post-container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">はろーにゅーわー</h1>
+                    <h1 class="description center-align post-title">Canvasを使ってVRCのアバターサムネイルに画像を差し込む</h1>
                 </div>
             </div>
         </div>
@@ -261,8 +263,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/routehachi_blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/">
-                                <span class="chip bg-color">お知らせ</span>
+                            <a href="/routehachi_blog/tags/%E5%82%99%E5%BF%98%E9%8C%B2/">
+                                <span class="chip bg-color">備忘録</span>
                             </a>
                         
                     </div>
@@ -277,14 +279,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>初回発表日:&nbsp;&nbsp;
-                    2022-06-04
+                    2023-03-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日:&nbsp;&nbsp;
-                    2022-12-21
+                    2023-03-04
                 </div>
                 
 
@@ -303,9 +305,41 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="引っ越しました"><a href="#引っ越しました" class="headerlink" title="引っ越しました"></a>引っ越しました</h2><p>弊ブログは<a target="_blank" rel="noopener" href="https://hachiroute.urishari.com/">Wordpress</a>からHexo（ここ）に引っ越しました！<br>なお、Wordpressのブログに関しては閉鎖を予定しています。有用そうな記事はこちらのほうに移植する予定です。</p>
-<p>ブログのテーマに<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">Matery</a>を利用しています。テーマ名の通りマテリアルデザインとなっており、今風なサイトのような雰囲気を出せるのが良いですね。（css,ejs等を弄って好みのデザインになるように改変しています）</p>
-<p>こんごともよろしく！</p>
+                <h2 id="サムネイルに使用する画像を用意する"><a href="#サムネイルに使用する画像を用意する" class="headerlink" title="サムネイルに使用する画像を用意する"></a>サムネイルに使用する画像を用意する</h2><p><img src="/routehachi_blog/medias/images/urontest.png"> </p>
+<p>画像を用意して、任意のAssetsフォルダに画像を突っ込みます。</p>
+<h3 id="画像のインポート設定"><a href="#画像のインポート設定" class="headerlink" title="画像のインポート設定"></a>画像のインポート設定</h3><p><img src="/routehachi_blog/medias/images/vrcthumb1.png"> </p>
+<p><strong>Texture Type</strong>を<strong>Sprite (2D and UI)</strong> 、<br><strong>Format</strong>を<strong>RGBA 32 bit</strong> にします。</p>
+<h2 id="Canvasを用意してImageを差し込む"><a href="#Canvasを用意してImageを差し込む" class="headerlink" title="Canvasを用意してImageを差し込む"></a>Canvasを用意してImageを差し込む</h2><p><img src="/routehachi_blog/medias/images/vrcthumb10.png"> </p>
+<p>Hierarchy上にCanvasを作成します（UI -&gt; Image）。</p>
+<p><img src="/routehachi_blog/medias/images/vrcthumb6.png"> </p>
+<p>Canvasの子になっているImageを選択して、</p>
+<p><strong>Pos X</strong>及び<strong>Pos Y</strong>を<strong>0</strong>に、<br><strong>Width</strong>及び<strong>Height</strong>をそれぞれ<strong>画像の縦横の数値と同じもの</strong>に、<br>Imageコンポーネントの<strong>Source Image</strong>に<strong>先程インポートした画像</strong>を設定します。</p>
+<h3 id="Canvasのレンダーモード等の設定"><a href="#Canvasのレンダーモード等の設定" class="headerlink" title="Canvasのレンダーモード等の設定"></a>Canvasのレンダーモード等の設定</h3><p><img src="/routehachi_blog/medias/images/vrcthumb11.png"> </p>
+<p>次にCanvasを選択し、<br>Canvasコンポーネントの<strong>Render Mode</strong>を<strong>Screen Space - Camera</strong>に設定します。</p>
+<p>これで指定されたカメラにCanvasをまるまる映すことができるようになります。</p>
+<p>また、<br>Canvas Scalerコンポーネントの<strong>UI Scale Mode</strong>を<strong>Scale With Screen Size</strong>に、<br><strong>Reference Resolution</strong>を<strong>画像の縦横の数値と同じもの</strong>に設定します。</p>
+<p>これでVRCCamに映っている物と、実際に出力されるサムネイル画像のスケール感が違う問題を解消します。</p>
+<h2 id="VRCCamにCanvasを映す"><a href="#VRCCamにCanvasを映す" class="headerlink" title="VRCCamにCanvasを映す"></a>VRCCamにCanvasを映す</h2><p>VRChat SDKのウィンドウからいつものようにアバターアップロードを始め、Gameウィンドウにいつもの確認画面を出します。<br>HierarchyのほうにVRCCamが生えているので選択。</p>
+<p><img src="/routehachi_blog/medias/images/vrcthumb4.png"> </p>
+<p><strong>Culling MaskにUIのチェックが付いてないので付けます</strong>。これで条件的にCanvasを映せるようになります。しかしまだ映りません。</p>
+<p><img src="/routehachi_blog/medias/images/vrcthumb7.png"> </p>
+<p><strong>Clipping Planes</strong>の<strong>Far</strong>を<strong>1000</strong>くらいに設定します。これでSceneの遠方にあるCanvasを映せるようになります。しかしまだ映りません。</p>
+<p><img src="/routehachi_blog/medias/images/vrcthumb12.png"> </p>
+<p>再びCanvasの設定を開き、<br>Canvasコンポーネントの<strong>Render Camera</strong>を<strong>VRCCam</strong>に設定します。これでようやくVRCCamにCanvasを映せるようになります。</p>
+<p><img src="/routehachi_blog/medias/images/vrcthumb8.png"> </p>
+<p>あとはImageをMove ToolやScale ToolでVRCCamの枠に上手く納めます。<br>Scaleを個別に変えない限り、画像の比率が変わることがありません。やったね！</p>
+<p>そのままだとCanvasの上にアバターが映り込むので、アバターには任意の方法でご退場してもらってください。</p>
+<div class="note info"><p>アバターサムネイルのサイズは 400x300(4:3) となっています。</p>
+</div>
+
+<p><img src="/routehachi_blog/medias/images/vrcthumb13.png"> </p>
+<p>VRCのマイページからアバターのサムネイルを確認し、VRCCamに映っていたものと同じサムネが反映されているか確認します。お疲れ～</p>
+<h2 id="利点"><a href="#利点" class="headerlink" title="利点"></a>利点</h2><ul>
+<li>VRCCamのほうを動かしたり、視野角を調整する必要がない</li>
+<li>画像の比率が変わったり、傾いたりしない（イラストを丁寧に扱える）</li>
+<li>PlaneメッシュにMaterialを…といった手順を踏まずに、かつ元の画像の色を忠実に再現できる（イラストを丁寧に扱える）</li>
+</ul>
+<h2 id="おわり"><a href="#おわり" class="headerlink" title="おわり"></a>おわり</h2><p><del>こんな手順を踏まなくてもVRChatのマイページとかからパッと変えれるようにしてほしい</del></p>
 
                 
             </div>
@@ -332,7 +366,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://routehachi.github.io/routehachi_blog/routehachi_blog/2022/06/04/1/">https://routehachi.github.io/routehachi_blog/routehachi_blog/2022/06/04/1/</a>
+                    <a href="https://routehachi.github.io/routehachi_blog/routehachi_blog/2023/03/04/vrc_thumbnail/">https://routehachi.github.io/routehachi_blog/routehachi_blog/2023/03/04/vrc_thumbnail/</a>
                 </span>
             </div>
             <!-- <div class="reprint__notice">
@@ -370,8 +404,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/routehachi_blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/">
-                                    <span class="chip bg-color">お知らせ</span>
+                                <a href="/routehachi_blog/tags/%E5%82%99%E5%BF%98%E9%8C%B2/">
+                                    <span class="chip bg-color">備忘録</span>
                                 </a>
                             
                         </div>
@@ -416,9 +450,55 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;前へ</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本ページ
+            </div>
+            <div class="card">
+                <a href="/routehachi_blog/2023/03/04/vrc_thumbnail/">
+                    <div class="card-image">
+                        
+                        <img src="/routehachi_blog/medias/images/vrcthumb9.png" class="responsive-img" alt="Canvasを使ってVRCのアバターサムネイルに画像を差し込む">
+                        
+                        <span class="card-title">Canvasを使ってVRCのアバターサムネイルに画像を差し込む</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            routehachi
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/routehachi_blog/tags/%E5%82%99%E5%BF%98%E9%8C%B2/">
+                        <span class="chip bg-color">備忘録</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                次へ&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/routehachi_blog/2022/12/20/anclguide/">
                     <div class="card-image">
@@ -435,9 +515,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -451,51 +531,6 @@
                     
                     <a href="/routehachi_blog/tags/%E3%82%A8%E3%83%B3%E3%82%B8%E3%82%A7%E3%83%AA%E3%83%83%E3%82%AF%E3%83%AA%E3%83%B3%E3%82%AF/">
                         <span class="chip bg-color">エンジェリックリンク</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本ページ&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/routehachi_blog/2022/06/04/1/">
-                    <div class="card-image">
-                        
-                        <img src="/routehachi_blog/medias/featureimages/0.jpg" class="responsive-img" alt="はろーにゅーわー">
-                        
-                        <span class="card-title">はろーにゅーわー</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-04
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            routehachi
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/routehachi_blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/">
-                        <span class="chip bg-color">お知らせ</span>
                     </a>
                     
                 </div>
