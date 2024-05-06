@@ -1,0 +1,1667 @@
+
+
+<!DOCTYPE html>
+<html lang="ja" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/routehachi_blog/favicon.png">
+  <link rel="icon" href="/routehachi_blog/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="routehachi">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="この記事は mstdn.maud.io Advent Calendar 2022 の20日目の記事です。昨日はrinsukiさんの4KVC00という安いのに YUY2 で 1080p60 出るキャプチャーボードと Splatoon 3 の画像認識をしてみた話 でした。               まずお詫びですが、当初はEUROBEATの記事について書く予定でした。ブログのカスタマイズと、見映え">
+<meta property="og:type" content="article">
+<meta property="og:title" content="エンクリ入門 ～異世界生活の手引き～">
+<meta property="og:url" content="https://routehachi.github.io/routehachi_blog/2022/12/20/anclguide/index.html">
+<meta property="og:site_name" content="routehachi">
+<meta property="og:description" content="この記事は mstdn.maud.io Advent Calendar 2022 の20日目の記事です。昨日はrinsukiさんの4KVC00という安いのに YUY2 で 1080p60 出るキャプチャーボードと Splatoon 3 の画像認識をしてみた話 でした。               まずお詫びですが、当初はEUROBEATの記事について書く予定でした。ブログのカスタマイズと、見映え">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/an33.png">
+<meta property="article:published_time" content="2022-12-20T14:00:00.000Z">
+<meta property="article:modified_time" content="2022-12-21T15:00:00.000Z">
+<meta property="article:author" content="routehachi">
+<meta property="article:tag" content="エンジェリックリンク">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://routehachi.github.io/routehachi_blog/medias/images/an33.png">
+  
+  
+  
+  <title>エンクリ入門 ～異世界生活の手引き～ - routehachi</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/routehachi_blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/routehachi_blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/routehachi_blog/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"routehachi.github.io","root":"/routehachi_blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/routehachi_blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/routehachi_blog/js/utils.js" ></script>
+  <script  src="/routehachi_blog/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/routehachi_blog/">
+      <strong>UronBoard</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/routehachi_blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>ホーム</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/routehachi_blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>プロフィール</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/routehachi_blog/medias/banner.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">エンクリ入門 ～異世界生活の手引き～</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        routehachi
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-12-20 23:00" pubdate>
+          2022年12月20日 午後
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          6.5k 単語
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          55 分
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">エンクリ入門 ～異世界生活の手引き～</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>この記事は <a target="_blank" rel="noopener" href="https://adventar.org/calendars/7364">mstdn.maud.io Advent Calendar 2022</a> の20日目の記事です。昨日はrinsukiさんの<a target="_blank" rel="noopener" href="https://rinsuki.hatenablog.jp/entry/2022/12/19/010805">4KVC00という安いのに YUY2 で 1080p60 出るキャプチャーボードと Splatoon 3 の画像認識をしてみた話</a> でした。</p>
+</blockquote>
+<div class="note note-warning">
+            <p>まずお詫びですが、当初はEUROBEATの記事について書く予定でした。<br>ブログのカスタマイズと、見映えの確認としてこの記事を書いていたら時間が足りなくなってしまい、こちらの記事をアドカレ用として採用することとしました。申し訳ない…！<br>（EUROBEATの事も書きたい欲はあるので、年内には記事を公開する予定です）</p>
+          </div>
+
+<p><strong>12&#x2F;22 追記</strong></p>
+<ul>
+<li>Advent Calendarの21日目のリンクを追加</li>
+<li>「どんなゲーム？（システム面）」に運営開発元の記述と本ゲームへのリンクを追加（今更） </li>
+<li>アスモデウスのおっぱいがデカい旨を記載</li>
+</ul>
+<h2 id="エンクリってどんなゲーム？"><a href="#エンクリってどんなゲーム？" class="headerlink" title="エンクリってどんなゲーム？"></a>エンクリってどんなゲーム？</h2><p><img src="/routehachi_blog/medias/images/an32.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>「いっけな～い、遅刻遅刻～！」（明けの明星）</p>
+<p>ひょんなことから彗星の如く地上へ堕天してきてしまったルシフェル。訳あって異世界転生してきた主人公のお顔めがけてルシフェルの双丘が連結（ぶつかってきたの意）！<br>ルシフェルが赤面しながらもお腹が空いたと訴えると、なんと双丘触らせてくれたお礼として、寄せ集めの材料を主人公が持ち前の料理スキルを披露、低予算ながらも豪華な晩飯を作り上げたのだ！</p>
+<p>あまりの美味に舌鼓を打ったルシフェル達。いつまでもこんな料理食べていたい…<em><strong>でも金がない。</strong></em><br>そこに創造主（主人公を異世界転生させた張本人）の声が主人公の脳内に直接語り掛けてくる……</p>
+<p><img src="/routehachi_blog/medias/images/an33.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>今日の食べ物のため、明日の食べ物のため…かくして、主人公とルシフェル一行の出稼ぎが今、始まるのであった。</p>
+<div class="note note-info">
+            <p>ここに書いてあることは半分フィクションです。詳しくはメインストーリーの序章を読んでみてください。</p>
+          </div>
+
+<h2 id="どんなゲーム？（システム面）"><a href="#どんなゲーム？（システム面）" class="headerlink" title="どんなゲーム？（システム面）"></a>どんなゲーム？（システム面）</h2><p><img src="/routehachi_blog/medias/images/an31.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p><a target="_blank" rel="noopener" href="https://www.dmm.com/netgame/feature/angelic.html">エンジェリックリンク</a>（通称、エンクリ）とは、合同会社EXNOA 及び 株式会社スマイルメーカーが運営および開発を行っているDMM GAMESのタイトルのひとつで、様々な理由で地上に堕天してきた堕天使たちとのんびり暮らすスローライフRPG…という名目のいわゆるソシャゲです。</p>
+<p><img src="/routehachi_blog/medias/images/an38.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<div class="note note-info">
+            <p>元々空腹の概念がなかった堕天使たち。地上に堕天してきてしまったことで人間と同様にお腹が空くようになってしまった！<br>そんな彼女たちの為に協力して食材を集め、料理を作ってあげて「堕」としちゃおう！</p>
+          </div>
+
+<p>というゲームです。多分…</p>
+<h3 id="戦闘について"><a href="#戦闘について" class="headerlink" title="戦闘について"></a>戦闘について</h3><p><img src="/routehachi_blog/medias/images/an39.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>戦闘は簡易的なコマンドバトル式となっていて、通常攻撃・スキル１・スキル２・SPスキルの4つの行動から選びます。それ以外の選択肢はありません。<br>加えて、攻撃対象の指定は自由ではなく、<strong>通常攻撃の場合は先頭の敵を、各種スキルの場合はスキル概要に書いてあるものを必ず攻撃対象とします</strong>。<br>また、<strong>MPの概念がなく</strong>、代わりにスキル毎にリキャスト値というものが設定されていて、<strong>スキルを使うと値が0になりターン経過毎や特定の行動で1回復、規定値に貯まるまでそのスキルは使えない</strong>といった仕様になっています。ターン準拠のクールタイム、といった感じでしょうか。</p>
+<p>このように色々あってえ～制限付きかよ～と思うかもしれませんが、これのおかげで「このステージではこの敵が出てくるからあれとあれを入れて…」等の編成を組む楽しさが生まれています。<del>まあ、ソシャゲらしいといえばらしいかも…</del></p>
+<p>一々コマンド指定なんかしてられんわ！という方向けに倍速モードとAUTOモードも用意されています。一度クリアした戦闘はスキップチケットというアイテムでスキップしまくることができます。なにかと時間がない現代社会にも優しいね！</p>
+<h3 id="キャラ育成について"><a href="#キャラ育成について" class="headerlink" title="キャラ育成について"></a>キャラ育成について</h3><p><img src="/routehachi_blog/medias/images/an34.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>キャラの育成は、Expを与えてレベルアップさせる他に、食材を集めて料理を作ってあげてRankというものを上げ、新しいスキルや特性を覚えさせていくといった要素があります。また、聖典というアイテムを一定以上集めると聖典覚醒というものが可能で、キャラのレアリティを上げて基礎ステータスを底上げすることができます。他にも…</p>
+<p><img src="/routehachi_blog/medias/images/an37.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p><strong>んああああ！（突然の昇天）</strong></p>
+<p>（どこからか知らんけどどんどん溜まっていくギフトを贈ると、まあなんというかその…「堕」とすことができます。ステータスにもおまけ程度ですがボーナスが加わります）</p>
+<div class="note note-primary">
+            <p>これはFANZA版向けのお得情報ですが、このゲームでは基本的にギフトを贈って好感度を上げるだけで寝室が解放されます。<br>ギフトはクエストスキップしてると勝手に溜まっていくので、無くなる気配はありません。つまり、実質お目当てのキャラが引ければ寝室がすぐ見れるようになっているのです。やったね！</p>
+          </div>
+
+
+<p>ここまで書いてあるのを見て「あれ？何かのゲームに似てる…」と思ったそこの<em><strong>VRHMDを被っていて、クリアすると願いが叶うオンラインゲームにとらわれているあなた</strong></em>は……勘が良いね！<br>（実際キャラの育成方針等はあっちとよく似ています）</p>
+<h3 id="キャラコンテンツとしての魅力"><a href="#キャラコンテンツとしての魅力" class="headerlink" title="キャラコンテンツとしての魅力"></a>キャラコンテンツとしての魅力</h3><p>よくあるソシャゲとは違い、エンクリではフレンドを作ったり、クランを設立してそこに入ったりクラン同士でバトルしたり…といったソーシャル要素がありません。<br><a target="_blank" rel="noopener" href="https://youtu.be/6b6wCiRkeSA?t=5505">いわゆるPvPにあたるコンテンツは実装しない</a>というコンセプトが当初から念頭に置かれていたようで、それを反映してかキャラクターボイスによるラジオや、FCバトルといった「推しに対するコンテンツ」に特化した作りになっています。</p>
+<p><img src="/routehachi_blog/medias/images/an41.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>ラジオでは、ニューエデンの出来事を報道しているニュースや<del>材料にアナコンダ等を使った再現難易度が高すぎる</del>お料理番組、FCバトル（後述）で1位になったキャラが自分語りをする特番、さらにはASMR等……キャラの魅力を耳で感じて癒されることができます。（あと麻雀ポーカーみたいなゲームもできます）</p>
+<p><img src="/routehachi_blog/medias/images/an42.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>また、だいたい3ヵ月おきに開催されるFCバトルでは、ユーザー達の推し力のぶつけ合いが始まります。「運営側で用意された各キャラのFC（ファンクラブ）に所属し、サンドバッグを飛ばして飛距離に応じた量の投票券を貰い、それを使って推しキャラに投票しまくる」といったなかなかユニークな内容になっていて、<strong>見事1位に輝いたキャラは先程のラジオで特番が設けられ、あわよくばファンレターまで読んでくれる</strong>といったファンサービスまで用意されています。<br>他のソシャゲでいうクラン戦のようなコンテンツですが「上位クランはもはや遊びじゃない」というプレッシャーを抱えることなく挑むことができるのはいいことですね（首位争いで負けても次があるので）。</p>
+<div class="note note-info">
+            <p>1位になったキャラは、次回以降のFCバトルでは殿堂入りとなり、1位の座を殿堂入りしていないキャラに譲ることになります。</p>
+          </div>
+
+<p>筆者は他ユーザーと争ったりするのが苦手なので、キャラコンテンツの拡充方面に力を入れてくれるというのは嬉しいですね。これからも一生異世界についていきます。</p>
+<h2 id="おすすめの初めどき"><a href="#おすすめの初めどき" class="headerlink" title="おすすめの初めどき"></a>おすすめの初めどき</h2><h3 id="エンクリフェス・天聖フェス開催期間"><a href="#エンクリフェス・天聖フェス開催期間" class="headerlink" title="エンクリフェス・天聖フェス開催期間"></a>エンクリフェス・天聖フェス開催期間</h3><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">第2回 エンクリ天聖フェス開催！<br><br>★3当選率2倍！<br>エンクリ天聖フェス限定キャラ「★3 アスタロト(天聖)」が新登場＆ピックアップ中✨<a target="_blank" rel="noopener" href="https://twitter.com/hashtag/%E3%82%A8%E3%83%B3%E3%82%B8%E3%82%A7%E3%83%AA%E3%83%83%E3%82%AF%E3%83%AA%E3%83%B3%E3%82%AF?src=hash&amp;ref_src=twsrc%5Etfw">#エンジェリックリンク</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/%E3%82%A8%E3%83%B3%E3%82%AF%E3%83%AA?src=hash&amp;ref_src=twsrc%5Etfw">#エンクリ</a> <a target="_blank" rel="noopener" href="https://t.co/5nhIjgQ4BL">pic.twitter.com/5nhIjgQ4BL</a></p>&mdash; 【DMM】エンジェリックリンク公式 (@AnCL_STAFF) <a target="_blank" rel="noopener" href="https://twitter.com/AnCL_STAFF/status/1597968694356819971?ref_src=twsrc%5Etfw">November 30, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>エンクリフェス及びエンクリ天聖フェスとは、毎月の初めに開催される特別な期間限定ガチャで、キャラテーブルが恒常＋フェス限定（天聖の場合は天聖＋フェス限定）となるほか、★3キャラの出現率が2倍（5%）になるお得なガチャです。</p>
+<p>ガーゴイル・マーラ・サマエル（水着F）、天聖枠だとアスタロト（天聖）等の強力なキャラが手に入るチャンスで、仮に手に入らなくても★3がダブる頻度が多く紙片を集めやすいのでキャラの育成面でもメリットがあります（もちろん引ければの話ですが…）<br>一から始める場合は未所持のキャラがどんどん出てきて、ある程度の戦力が整うのでお得です。</p>
+<h3 id="ダイヤミッション販売時を狙う"><a href="#ダイヤミッション販売時を狙う" class="headerlink" title="ダイヤミッション販売時を狙う"></a>ダイヤミッション販売時を狙う</h3><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">あやらぶコラボ記念ミッション各種販売中！<br><br>各種ミッションを購入すると、<br>有償ダイヤに加えて、購入時よりミッションページにて<br>6日間毎日無償ダイヤやスタミナをGETできます✨<br><br>各商品とミッションで手に入るおまけの詳細は、<br>ゲーム内よりご確認ください🎵<a target="_blank" rel="noopener" href="https://twitter.com/hashtag/%E3%82%A8%E3%83%B3%E3%82%AF%E3%83%AA?src=hash&amp;ref_src=twsrc%5Etfw">#エンクリ</a> <a target="_blank" rel="noopener" href="https://t.co/twMijQ1Ns4">pic.twitter.com/twMijQ1Ns4</a></p>&mdash; 【DMM】エンジェリックリンク公式 (@AnCL_STAFF) <a target="_blank" rel="noopener" href="https://twitter.com/AnCL_STAFF/status/1569250918776074240?ref_src=twsrc%5Etfw">September 12, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>エンクリが何かの作品とコラボしたり、アニバーサリーを迎えたりすると、ショップにダイヤミッションというのが販売されることがあります。</p>
+<p>だいたい1万円で売っている事が多く、購入時点で一定のダイヤ（以下、石）が手に入り、購入後ログイン毎に追加の石を獲得、6日分ログインすることで最終的に購入額の2倍の量の石を手に入れることができます。（1万円のダイヤミッションなら最終的に20000石手に入ることになります）<br>ダイヤ購入時の標準レートが1円0.5～0.65石、期間限定商品でも1円1.0～1.2石のケースが多く、ログインの習慣が必要とはいえ<strong>1円2石なので破格</strong>といえるでしょう。課金スタートを考えている場合はこの期間を狙うのがオススメです。</p>
+<div class="note note-info">
+            <p>エンクリのガチャの天井は250回に設定されており、ガチャは1回150石なので<strong>250回引く場合は37500石必要</strong>になります。</p>
+          </div>
+
+<h2 id="編成の基本"><a href="#編成の基本" class="headerlink" title="編成の基本"></a>編成の基本</h2><h3 id="攻撃タイプは2種類"><a href="#攻撃タイプは2種類" class="headerlink" title="攻撃タイプは2種類"></a>攻撃タイプは2種類</h3><p>ソシャゲでよくありがちな<strong>3すくみ的な属性の概念は、エンクリには存在しません</strong>。</p>
+<p>キャラ毎に<font color="FireBrick"><strong>物理攻撃</strong></font>か<font color="DarkBlue"><strong>魔法攻撃</strong></font>かに分類されているだけで、違うタイプのキャラには威力○○倍というのも基本的には存在しません。（物理防御・魔法防御のステータスはあります）</p>
+<h3 id="キャラのポジションは固定"><a href="#キャラのポジションは固定" class="headerlink" title="キャラのポジションは固定"></a>キャラのポジションは固定</h3><p><img src="/routehachi_blog/medias/images/an2.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>各キャラには内部ステータスとして<a target="_blank" rel="noopener" href="https://angelic.wikiru.jp/?%E3%83%9D%E3%82%B8%E3%82%B7%E3%83%A7%E3%83%B3">ポジション値が設定されていていて</a>、この値が小さいキャラから順番に前から隊列を組むようになっています。（この値を変える方法は現時点では存在しませんが主人公のみ例外です。後述）</p>
+<p>基本的に先頭のキャラは狙われやすいので、耐久性が低いキャラを置かないように注意しましょう。</p>
+<h3 id="サポーター・ヒーラー・タンクを活用する"><a href="#サポーター・ヒーラー・タンクを活用する" class="headerlink" title="サポーター・ヒーラー・タンクを活用する"></a>サポーター・ヒーラー・タンクを活用する</h3><p>編成がアタッカー一辺倒だと、敵の攻撃を凌げずに味方がどんどん倒されてしまう可能性が高いので、これらの役職を持つキャラクターを編成に組むことを検討してみてください。</p>
+<p>以下は役職リスト</p>
+<table>
+<thead>
+<tr>
+<th align="center">役職</th>
+<th align="left">主な役割・特徴</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">アタッカー</td>
+<td align="left">高い攻撃力を持ち、主に攻撃スキルでダメージを与えるのを得意とする。一部キャラは敵にデバフや状態異常を与えることができる</td>
+</tr>
+<tr>
+<td align="center">サポーター</td>
+<td align="left">主にパーティ内へのバフ・敵へのデバフを与えるスキルを持ち、メンバーの打点の底上げを得意とする。キャラによっては準アタッカーとして運用できる</td>
+</tr>
+<tr>
+<td align="center">ヒーラー</td>
+<td align="left">主にパーティメンバーのHPを回復するスキルを持ち、メンバーの生存に貢献する（戦闘中のHP回復手段は回復スキル以外に存在しない）。攻撃力は低め</td>
+</tr>
+<tr>
+<td align="center">タンク</td>
+<td align="left">隊列の一番前で敵のダメージを受け止めるのを得意とする。自己生存に特化したスキルが多く、それと引き換えに攻撃力は皆無</td>
+</tr>
+</tbody></table>
+<p>メインコンテンツであればタンク１：アタッカー３：サポーター１：ヒーラー１の運用がオススメ。火力が足りないと感じたらアタッカーを増やしてみたり、カスタマイズした主人公で1人2役を担当したりしてみましょう（主人公のカスタマイズについては後述）<br>タンクは攻撃力が基本的に皆無な為、2人以上入れるのはおすすめしません。</p>
+<h3 id="主人公をカスタマイズする（スキルリンク）"><a href="#主人公をカスタマイズする（スキルリンク）" class="headerlink" title="主人公をカスタマイズする（スキルリンク）"></a>主人公をカスタマイズする（スキルリンク）</h3><p><img src="/routehachi_blog/medias/images/an3.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>この手のゲームでは珍しく、主人公が戦闘に参加することができます。<br>素のステータスは貧弱なのですが、「他のキャラクターのスキルやステータスを借りて使うことができる」という異世界転生でありがちなチート能力（？）を使うことができます。</p>
+<p>スキル1、スキル2、SPスキル、特性2つとそれぞれ枠が用意されていて、そこにキャラをセットするとそのキャラの該当するスキルや特性を使用できます。<br>またベース枠というのも用意されており、その枠にセットしたキャラのHP・攻撃力・各防御力の30%、すばやさの100%を主人公にステータスに上乗せすることができます。ずるい！</p>
+<p>これらを駆使して、高いステータスを活かして2つの役職をこなすナイスな主人公を作って編成枠の実質の圧縮を実現することができます。例えば…</p>
+<ul>
+<li>すばやさが高いキャラをベースにして、麻痺等の行動不能系の状態異常を必ず先手で仕掛けるセコい主人公</li>
+<li>タンクベースにして皆の先頭に立ち、女の子達を守りながら自身も打点を稼げる理想の主人公</li>
+</ul>
+<p>等の運用ができます（上の画像はヒーラー運用しながらも自身も打点が稼げる系のスキルリンク編成です。ちょっと雑かも…）</p>
+<h2 id="バトルのコツ"><a href="#バトルのコツ" class="headerlink" title="バトルのコツ"></a>バトルのコツ</h2><h3 id="すばやさについて"><a href="#すばやさについて" class="headerlink" title="すばやさについて"></a>すばやさについて</h3><p>エンクリのバトルでは、すばやさのステータスが高い味方あるいは敵キャラから順番に行動する方式となっています。すばやさが拮抗しているとき、確率で先に動ける等のランダム要素はありません。</p>
+<h3 id="行動不能系の状態異常を使いこなす"><a href="#行動不能系の状態異常を使いこなす" class="headerlink" title="行動不能系の状態異常を使いこなす"></a>行動不能系の状態異常を使いこなす</h3><p><img src="/routehachi_blog/medias/images/an4.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>バトルの攻略でキモとなるのが、「麻痺」「暗闇」「沈黙」といった行動不能系の状態異常です。<br>一部キャラには、スキルでこれらの状態異常を付与できる者がおり、これが敵にかかると<strong>指定ターンの間、その敵のあらゆる行動を不能にする</strong>ことができ、味方側に絶大なアドバンテージをもたらすことができます。相手の強力な攻撃をやり過ごし、こちら側の態勢を整える、といった事が可能です。</p>
+<p>これとは別に「遅延」という状態異常があります。こちらは行動を封じるものではないですが、<strong>指定ターンの間、その敵の行動順が強制的に最後になります</strong>。この味方はスキルの都合でこの敵より先に動いてほしい、といったときに役に立ちます。</p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="left">効果（敵にかかった場合）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">麻痺</td>
+<td align="left">指定ターン（麻痺にかかったターンを含む）の間行動不能。全ての敵に有効。</td>
+</tr>
+<tr>
+<td align="center">暗闇</td>
+<td align="left">指定ターン（暗黒にかかったターンを含む）の間行動不能。物理タイプの敵にのみ有効。</td>
+</tr>
+<tr>
+<td align="center">沈黙</td>
+<td align="left">指定ターン（沈黙にかかったターンを含む）の間行動不能。魔法タイプの敵にのみ有効。</td>
+</tr>
+<tr>
+<td align="center">遅延</td>
+<td align="left">指定ターン（遅延にかかったターンを含む）の間、すばやさの値に関係なく行動順が最後になる。全ての敵に有効。</td>
+</tr>
+</tbody></table>
+<p>ただし、ステージが進むと、敵側もこれらを仕掛けてくるので注意が必要です。</p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="left">効果（味方にかかった場合）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">麻痺</td>
+<td align="left">指定ターン（麻痺にかかったターンを含む）の間行動不能。全ての味方に有効。</td>
+</tr>
+<tr>
+<td align="center">暗闇</td>
+<td align="left">指定ターン（暗黒にかかったターンを含む）の間、スキル１・２が使用不可。物理タイプの味方にのみ有効。</td>
+</tr>
+<tr>
+<td align="center">沈黙</td>
+<td align="left">指定ターン（沈黙にかかったターンを含む）の間、スキル１・２が使用不可。魔法タイプの味方にのみ有効。</td>
+</tr>
+<tr>
+<td align="center">遅延</td>
+<td align="left">指定ターン（遅延にかかったターンを含む）の間、すばやさの値に関係なく行動順が最後になる。全ての味方に有効。</td>
+</tr>
+</tbody></table>
+<h3 id="デバフ・状態異常の持続ターンに気をつける"><a href="#デバフ・状態異常の持続ターンに気をつける" class="headerlink" title="デバフ・状態異常の持続ターンに気をつける"></a>デバフ・状態異常の持続ターンに気をつける</h3><p>上記の通り便利な状態異常ですが、発動を狙う上で一つ覚えておきたいのは、<strong>表記されている指定ターン数は、状態異常・デバフを仕掛けたターンも含まれる（１ターン目として数える）</strong>ということです。</p>
+<p><img src="/routehachi_blog/medias/images/an5.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>つまり、目当ての敵が行動した後に仕掛けても、実質そのターンは相手にただの攻撃を与えるだけとなってしまいます。１ターンしか効果がないものの場合は仕掛けても全くの無駄ということに…<br>なので敵の行動より早く仕掛けれるように工夫する必要があります。ただ、状態異常付与スキル持ちのキャラはすばやさが低いという矛盾気味なステータスになっていることがよくあるので、主人公へのスキルリンクで移植させて、高いすばやさで発動させるのがアドです。</p>
+<h2 id="恒常キャラのおすすめ"><a href="#恒常キャラのおすすめ" class="headerlink" title="恒常キャラのおすすめ"></a>恒常キャラのおすすめ</h2><p>現時点のゲームバランスでは、メインコンテンツであれば恒常キャラでも十分戦力となるので、始めたての方向けに役割別におすすめのキャラを紹介していきます。</p>
+<h3 id="アタッカー"><a href="#アタッカー" class="headerlink" title="アタッカー"></a>アタッカー</h3><h4 id="単体攻撃（物理）"><a href="#単体攻撃（物理）" class="headerlink" title="単体攻撃（物理）"></a>単体攻撃（物理）</h4><p>攻撃系スキルが単体対象に特化しているキャラ達です。主に単体ボス戦（イベント戦・緊急クエスト・勝ち抜き戦など）で運用されます。</p>
+<h5 id="【★1】ルシフェル"><a href="#【★1】ルシフェル" class="headerlink" title="【★1】ルシフェル"></a>【★1】ルシフェル</h5><p><img src="/routehachi_blog/medias/images/an1.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">2</td>
+<td align="left">攻撃力アップ（中・2ターン）<br>先頭の敵に物理ダメージ（小）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">3</td>
+<td align="left">先頭の敵に物理ダメージ（大）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">4</td>
+<td align="left">先頭の敵に物理ダメージ（特大）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>ひょんなことから天界から地上へ堕天してきた、元天使軍のリーダー。おっぱいがデカい。<br>加えて小生意気だけど素直なチョロイン。よく腰を破壊する。</p>
+          </div>
+
+<p>スキル構成はいたってシンプルで、更にリキャスト値の低さのおかげで通常攻撃を挟まずにスキルがバンバン撃てるのが特徴のアタッカー。<br>これのおかげで他の恒常アタッカー並に火力が出せるので、初期加入キャラなのになかなか使えるようになっています。</p>
+<h5 id="【★2】フラウロス"><a href="#【★2】フラウロス" class="headerlink" title="【★2】フラウロス"></a>【★2】フラウロス</h5><p><img src="/routehachi_blog/medias/images/an6.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">2</td>
+<td align="left">攻撃力アップ（中・2ターン）<br>先頭の敵に物理ダメージ（小）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">2</td>
+<td align="left">先頭の敵に物理ダメージ（小）<br>すばやさアップ（2ターン）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">4</td>
+<td align="left">攻撃力アップ（大・2ターン）<br>先頭の敵に物理ダメージ（特大）<br>自分の物理防御ダウン（小・2ターン）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>自分の事を猫だと思い込んでいる黒豹戦士。クールで血を求めている怖そうな性格のはずなのだが、語尾と習性が猫なので、関連するものが目に入ってしまうとキャラが崩壊する。</p>
+          </div>
+
+<p>ルシフェルと同様に、リキャスト値の低い技構成で通常攻撃を挟まずに攻撃し続けることが可能なアタッカー。<br>スキル1とSPスキルでバフを多々掛けれるので、ルシフェルよりも火力に貢献できるのが強み。恒常キャラの中ではトップクラスの火力とされています。ただしポジションはだいぶ前なので、タンクを置くなどしてフラウロスが倒されないように配慮が必要。<br>スキル2ですばやさが上がって敵への先制もしやすくなる一方、味方サポーターよりも早く動いてしまうことが玉に瑕。</p>
+<h5 id="【★3】アモン"><a href="#【★3】アモン" class="headerlink" title="【★3】アモン"></a>【★3】アモン</h5><p><img src="/routehachi_blog/medias/images/an7.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">3</td>
+<td align="left">先頭の敵に物理ダメージ（大）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">2</td>
+<td align="left">攻撃力アップ（中・2ターン）<br>先頭の敵に物理ダメージ（小）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">5</td>
+<td align="left">攻撃力アップ（中・2ターン）<br>先頭の敵に物理ダメージ（特大）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">自分のHPが50%以上の時、自分の攻撃力を中アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>勇者を名乗る堕天使。セリフのメタ要素が高い。<del>勇者であれば何でもやっていいと思っている</del></p>
+          </div>
+
+<p>スキルの回転は上2名程ではないですが、代わりにスキルのバフと特性のバフ量で攻撃力を底上げして火力を出すタイプのアタッカー。<br>特性の発動を上手く維持できれば、長期戦において最終的に上2名よりも火力に貢献できます。</p>
+<h4 id="全体攻撃（物理）"><a href="#全体攻撃（物理）" class="headerlink" title="全体攻撃（物理）"></a>全体攻撃（物理）</h4><p>攻撃系スキルが全体対象に特化しているキャラ達です。主に編隊を組んでいるボス戦（メインストーリー・創造主の定期試験・FCバトルなど）で運用されます。<del>だれもかれもおっぱいがデカい</del></p>
+<h5 id="【★1】カーリー"><a href="#【★1】カーリー" class="headerlink" title="【★1】カーリー"></a>【★1】カーリー</h5><p><img src="/routehachi_blog/medias/images/an9.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">3</td>
+<td align="left">先頭の敵に物理ダメージ（小）<br>攻撃力アップ（大・2ターン）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">3</td>
+<td align="left">敵全体に物理ダメージ（大）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">5</td>
+<td align="left">敵全体に物理ダメージ（特大）<br>すばやさアップ（2ターン）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>脳内が踊りと飲みの事しかない堕天使。おっぱいがデカい。<del>ナイトクラブで度々揺れている</del></p>
+          </div>
+
+<p>素の攻撃力が高めの全体アタッカー。スキル１でバフってからSPを叩き込む戦法で火力に貢献できます。<br>SPスキル発動時にすばやさも上がりますが、それを活かせるようなスキルを持ってないので有用性は低めかも…？</p>
+<h5 id="【★1】ティアマット"><a href="#【★1】ティアマット" class="headerlink" title="【★1】ティアマット"></a>【★1】ティアマット</h5><p><img src="/routehachi_blog/medias/images/an10.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">2</td>
+<td align="left">攻撃力アップ（中・2ターン）<br>敵全体に物理ダメージ（小）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">3</td>
+<td align="left">敵全体に物理ダメージ（大）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">6</td>
+<td align="left">敵全体に物理ダメージ（特大）<br>自分のHP回復（小）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">自分のHPが50%以上の時、自分の攻撃力を中アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>戦闘能力が高く、美人で、ママのような接し方まで併せ持ち隙がない堕天使。それに比例するように、おっぱいがデカい。</p>
+          </div>
+
+<p>スキルの攻撃対象がすべて全体攻撃、スキル１でバフ、SPスキルで自身のHP回復可と自己完結タイプに仕上がっているアタッカー。おまけにバフ量が多い特性まで併せ持つ。ほんまに★1か？<br>ただしSPスキルのリキャストは６と重めでばんばん自己回復できるわけではないので、ヒーラーをもう一人用意して特性の発動を維持できるようにしておきたいですね。</p>
+<h5 id="【★3】バフォメット"><a href="#【★3】バフォメット" class="headerlink" title="【★3】バフォメット"></a>【★3】バフォメット</h5><p><img src="/routehachi_blog/medias/images/an8.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">2</td>
+<td align="left">先頭の敵に物理ダメージ（小） <br>攻撃力アップ（小・2ターン）<br>物理防御力アップ（小・2ターン）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">3</td>
+<td align="left">敵全体に物理ダメージ（大）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">5</td>
+<td align="left">敵全体に物理ダメージ（特大）<br>味方全体の物理防御力アップ（小・2ターン）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>山奥でヤギ牧場を営む、優しさあふれる堕天使。おっぱいがデカい。<br>彼女自身もヤギっぽく、キャラストーリーを読み進めると意外な事実が発覚する…（続きはFANZAで！）</p>
+          </div>
+
+<p>アタッカーでありながらHPと防御力がそれなりにあり、攻守両方こなせるスキル構成で準タンクとしても運用できます。SPスキルでは味方全体の防御バフも入るので、パーティの生存にも貢献できるのが良いですね。<br>タンク置きたいけど火力不足で、けどアタッカー置くと倒されてしまって…という時にバフォメットを入れるといい塩梅になってくれるかもしれません。</p>
+<h4 id="単体攻撃（魔法）"><a href="#単体攻撃（魔法）" class="headerlink" title="単体攻撃（魔法）"></a>単体攻撃（魔法）</h4><p>基本的に運用方法は物理タイプのキャラと同じ。ステージを進めていくと特定タイプへのバリアを持つ敵が出現するので、それまでに物理メイン&#x2F;魔法メインの2編成が作れるようにしておきましょう。</p>
+<h5 id="【★1】ハーゲンティ"><a href="#【★1】ハーゲンティ" class="headerlink" title="【★1】ハーゲンティ"></a>【★1】ハーゲンティ</h5><p><img src="/routehachi_blog/medias/images/an11.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">4</td>
+<td align="left">先頭の敵に魔法ダメージ（中）<br>先頭の味方のHP回復（小）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">4</td>
+<td align="left">攻撃力アップ（特大・2ターン）<br>先頭の敵に魔法ダメージ（中）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">4</td>
+<td align="left">先頭の敵に魔法ダメージ（特大）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>実験が好きすぎる堕天使。薬の調合で度々超反応を起こし、店を爆破してしまう。</p>
+          </div>
+
+<p>味方のHP回復までこなすサポーター的な一面もあるアタッカー。スキル2のバフが特大で、かけてからSPスキルでしっかり殴っていけるのも魅力的です。<br>すばやさがかなり低く、相手の攻撃を受けてからの行動になりがちなのが欠点。</p>
+<h5 id="【★3】アイペロス"><a href="#【★3】アイペロス" class="headerlink" title="【★3】アイペロス"></a>【★3】アイペロス</h5><p><img src="/routehachi_blog/medias/images/an12.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">3</td>
+<td align="left">攻撃力アップ（中・2ターン）<br>敵全体に魔法ダメージ（小）<br>すばやさアップ（2ターン）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">3</td>
+<td align="left">先頭の敵に魔法ダメージ（大）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">4</td>
+<td align="left">先頭の敵に魔法ダメージ（特大）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>手品師見習い（？）の堕天使。おっぱいがデカい。<del>ミニゲームではイカサマが得意なことに定評がある</del></p>
+          </div>
+
+<p>スキルの回転率がルシフェル並みとまではいかないが、素の火力が高いオーソドックスなアタッカー。<br>緊急クエストのメダルで聖典と交換できるので、紙片を消費しなくても★5まで覚醒できるのも強みです。</p>
+<h5 id="【★3】レヴィアタン"><a href="#【★3】レヴィアタン" class="headerlink" title="【★3】レヴィアタン"></a>【★3】レヴィアタン</h5><p><img src="/routehachi_blog/medias/images/an13.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">3</td>
+<td align="left">先頭の敵に魔法ダメージ（小）<br>攻撃力アップ（大・3ターン）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">3</td>
+<td align="left">先頭の敵に魔法ダメージ（3回）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">5</td>
+<td align="left">先頭の敵の物理防御ダウン（小・2ターン）<br>先頭の敵に魔法ダメージ（4回）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>美しい海をこよなく愛する堕天使。愛情もデカいしおっぱいもデカい。海のように物腰が柔らかく、正統派ヒロインの素質がある（私感）。</p>
+          </div>
+
+<p>他のアタッカーと違い、スキルが多段攻撃になっている効率重視のアタッカー。多段攻撃の最中に敵を倒した場合、残りの攻撃回数はその次の敵が対象となるため、無駄なくダメージを与えることができます。<br>すばやさが低いのが欠点。</p>
+<h4 id="全体攻撃（魔法）"><a href="#全体攻撃（魔法）" class="headerlink" title="全体攻撃（魔法）"></a>全体攻撃（魔法）</h4><h5 id="【★2】ベリト"><a href="#【★2】ベリト" class="headerlink" title="【★2】ベリト"></a>【★2】ベリト</h5><p><img src="/routehachi_blog/medias/images/an14.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">3</td>
+<td align="left">敵全体に魔法ダメージ（大）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">2</td>
+<td align="left">攻撃力アップ（中・2ターン）<br>敵全体に魔法ダメージ（小）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">6</td>
+<td align="left">敵全体に魔法ダメージ（特大）<br>攻撃力アップ（大・2ターン）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>人々から褒められることに悦びを感じる、大司祭を営む堕天使。おっぱいがデカい。</p>
+          </div>
+
+<p>スキルが全て全体攻撃で、敵編隊の殲滅やFCバトルでの火力貢献まで幅広くこなすアタッカー。<br>素の火力自体は他のアタッカーと比べるとちょっと劣りますが、その分耐久性やすばやさに振られています。</p>
+<h5 id="【★3】マステマ"><a href="#【★3】マステマ" class="headerlink" title="【★3】マステマ"></a>【★3】マステマ</h5><p><img src="/routehachi_blog/medias/images/an15.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">3</td>
+<td align="left">自分に割合ダメージ（最大HPの10%）<br>攻撃力アップ（特大・2ターン）<br>敵全体に魔法ダメージ（中）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">3</td>
+<td align="left">敵全体に魔法ダメージ（大）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">3</td>
+<td align="left">敵全体に魔法ダメージ（大）<br>自分に割合ダメージ（最大HPの10%）<br>敵全体に魔法ダメージ（小）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">自分のHPが50%以下の時、自分の攻撃力を中アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>自身の魔法が暴発するのが原因で人々から距離を置いている、ちょっとかわいそうな堕天使。おっぱいがデカい。</p>
+          </div>
+
+<p><strong>リキャストがすべて3で毎ターン全体攻撃可、全体攻撃キャラの中ではトップクラスの火力を持つ</strong>というふざけた性能、ただしその<strong>代償として自傷ダメージを受けてしまう</strong>リスクと隣り合わせのアタッカー。<br>結果としてヒーラーの回復スキルがほぼほぼマステマに向くというデメリットもある（＝パーティ全体の耐久力が減る）ので、よく考えて編成に入れておきたいところです。</p>
+<p>全体攻撃が必須級、且つ魔法攻撃が通りやすいFCバトルにおいては味方のHPを気にする必要はないので、恒常キャラでありながらかなりの活躍が見込めます。<br>緊急クエストのメダルで聖典と交換できるので、紙片を消費しなくても★5まで覚醒できるのも強みです。</p>
+<h4 id="状態異常付与"><a href="#状態異常付与" class="headerlink" title="状態異常付与"></a>状態異常付与</h4><p>敵に状態異常を与えることの出来るキャラを抜粋。基本的に★3ばかりですが、お迎えできればメインコンテンツ攻略はぐっと楽になります。<br>ただし、エンドコンテンツ（メインコンテンツのハードやイベントのベリーハード以上等）では<strong>自分にとって都合の悪い状態異常を無効化するボスが出現する</strong>ので、それらには無力になるのが悲しいところ…</p>
+<h5 id="【★3】バロール"><a href="#【★3】バロール" class="headerlink" title="【★3】バロール"></a>【★3】バロール</h5><p><img src="/routehachi_blog/medias/images/an16.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">2</td>
+<td align="left">攻撃力アップ（中・2ターン）<br>敵全体に魔法ダメージ（小）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">6</td>
+<td align="left">敵全体に魔法ダメージ（中）<br>敵全体に麻痺を付与（2ターン）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">3</td>
+<td align="left">敵全体に魔法ダメージ（特大）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>中二病を拗らせた堕天使。中二病…なのだが眼帯に隠されているのはマジもんの魔眼である。素の言動が可愛すぎる（私感）</p>
+          </div>
+
+<p>全体魔法攻撃を得意とし、<strong>スキル2でありとあらゆる敵を麻痺させて行動を暫く停止させることができる</strong>アタッカー。リキャストは6と重いので、相手の行動に合わせてタイミングよく発動させたいところです。<br>欠点としてすばやさが恒常キャラの中ではワースト級で、せっかくの麻痺2ターンがこのままだと活かし辛い（実質1ターンになってしまう）のが難点。他キャラのスキルですばやさのバフをかけてあげる等の対策が必要。面倒な場合は、すばやさが高い仕様の主人公にスキルリンクするのも手です（むしろこれでの運用がメインになりそう）。</p>
+<h5 id="【★3】バアル"><a href="#【★3】バアル" class="headerlink" title="【★3】バアル"></a>【★3】バアル</h5><p><img src="/routehachi_blog/medias/images/an17.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">2</td>
+<td align="left">攻撃力アップ（中・2ターン）<br>敵全体に物理ダメージ（小）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">5</td>
+<td align="left">敵全体に物理ダメージ（中）<br>敵全体に沈黙を付与（2ターン）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">3</td>
+<td align="left">敵全体に物理ダメージ（中）<br>沈黙状態の敵全体に物理ダメージ（小）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>両手にカエルとネコのパペットを携える芸人魂バリバリな堕天使にょ。日々の会話でも息をするようにダジャレを披露しているにょ。ストーリーを読んでいる身としてそれらを拾うのも大変にょ…披露だけに。</p>
+          </div>
+
+<p>全体物理攻撃を得意とし、スキル2で敵全体を沈黙させて、魔法タイプの敵の行動を暫く停止させることができるアタッカー。行動不能対象が限定されてるのか、バロールと比べてリキャストは5と少し軽め。<br>また、沈黙状態が続いていればSPスキルで追撃も可能で、上手く運用すれば火力にも貢献できる一石二鳥な性能になっています。</p>
+<p>ちなみに、沈黙状態は物理タイプの敵にも一応かかるようにはなっていて、行動不能にはなりませんがバアルのSPスキルの追撃の対象にはなってくれます。バアル以外にも特定の状態異常を参照して追撃するタイプのキャラは何人かいるので覚えておきましょう。</p>
+<h5 id="【★3】ワル"><a href="#【★3】ワル" class="headerlink" title="【★3】ワル"></a>【★3】ワル</h5><p><img src="/routehachi_blog/medias/images/an18.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">2</td>
+<td align="left">攻撃力アップ（中・2ターン）<br>先頭の敵に物理ダメージ（小）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">5</td>
+<td align="left">敵全体に物理ダメージ（中）<br>敵全体に暗闇を付与（2ターン）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">5</td>
+<td align="left">クリティカルダメージアップ（2段階・2ターン）<br>敵全体に物理ダメージ（特大）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>不良に憧れてそれらしいファッションをしているが、不良っぽい行動は最終的に善行になってしまう堕天使。名前は安直っぽいように見えるが、元ネタの「ウヴァル」の表記ゆれから来ている。</p>
+          </div>
+
+<p>全体物理攻撃を得意とし、スキル2で敵全体を暗闇にさせて、物理タイプの敵の行動を暫く停止させることができるアタッカー。こちらもリキャストは5。<br>バアルの暗闇版と思われがちですが、SPスキルのリキャストは重めになっていて、素直な感じのスキル構成となっています。</p>
+<p>欠点としてすばやさが低いので、主人公のスキルリンクとして扱うのも手です。</p>
+<h5 id="【★1】ケルベロス"><a href="#【★1】ケルベロス" class="headerlink" title="【★1】ケルベロス"></a>【★1】ケルベロス</h5><p><img src="/routehachi_blog/medias/images/an19.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">3</td>
+<td align="left">先頭の敵に物理ダメージ（大）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">2</td>
+<td align="left">攻撃力アップ（中・2ターン）<br>先頭の敵に物理ダメージ（小）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">6</td>
+<td align="left">先頭の敵に物理ダメージ（特大）<br>先頭の敵に麻痺を付与（1ターン）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>ニューエデンで警察官をやっている堕天使。しかし誘惑（主にお昼寝）に弱く、職務放棄の常習犯であり、おっぱいもデカい。</p>
+          </div>
+
+<p>★1で唯一の麻痺付与持ちで、バロールが引けてない人への救済措置みたいな立ち位置のアタッカー。アタッカーとしても地味に高水準で、バフで助走をつけてからSPスキルでしっかり殴ることができる。<br>欠点としてすばやさがやや低く、麻痺の持続効果が1ターンしかないため、自身よりすばやさが高い敵に対してはSPスキルがただの単体攻撃になってしまうので注意。</p>
+<p>他のキャラがスキル2に状態異常付与スキルを持つ中、ケルベロスの麻痺付与はSPスキルに設定されているので、主人公のスキルリンクにてベースをすばやさ高めのキャラに、スキル2にバロールを、SPスキルにケルベロスをリンクさせることで<strong>ここぞの時に敵を3ターン麻痺させることのできるセコい主人公</strong>が完成します。</p>
+<h3 id="サポーター"><a href="#サポーター" class="headerlink" title="サポーター"></a>サポーター</h3><p>攻撃力バフや相手への攻撃力・防御力デバフを得意とし、パーティの火力の底上げに貢献してくれる役職です。</p>
+<h4 id="攻撃力アップ（物理）"><a href="#攻撃力アップ（物理）" class="headerlink" title="攻撃力アップ（物理）"></a>攻撃力アップ（物理）</h4><h5 id="【★3】ムルムル"><a href="#【★3】ムルムル" class="headerlink" title="【★3】ムルムル"></a>【★3】ムルムル</h5><p><img src="/routehachi_blog/medias/images/an20.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">4</td>
+<td align="left">物理タイプの味方全体の攻撃力アップ（小・3ターン）<br>先頭の敵に物理ダメージ（小）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">3</td>
+<td align="left">先頭の敵に物理ダメージ（大）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">5</td>
+<td align="left">先頭の敵に物理ダメージ（中）<br>物理タイプの味方の内、攻撃力が高い3人の攻撃力アップ（大・3ターン）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>考えるより感じて踊り明かす、パリピでムードメーカーな堕天使。おっぱいがデカい。</p>
+          </div>
+
+<p>スキルで定期的に他アタッカー達の火力を支援するサポーター。バフ量は（小&#x2F;大）と一見控えめのように見えますが、自身の素早さが高いのでアタッカー達がバフを3ターン分活用しやすいのと、持続ターン数が長めなことからバフが途切れにくく結果として十分な火力上昇量となります。迎えれたら是非物理パに編成しておきたいですね。</p>
+<h4 id="攻撃力アップ（魔法）"><a href="#攻撃力アップ（魔法）" class="headerlink" title="攻撃力アップ（魔法）"></a>攻撃力アップ（魔法）</h4><h5 id="【★3】ウァラク"><a href="#【★3】ウァラク" class="headerlink" title="【★3】ウァラク"></a>【★3】ウァラク</h5><p><img src="/routehachi_blog/medias/images/an21.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">3</td>
+<td align="left">魔法タイプの味方の内、攻撃力が高い3人の攻撃力アップ（中・3ターン）<br>先頭の敵に魔法ダメージ（小）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">5</td>
+<td align="left">攻撃力アップ（大・3ターン）先頭の敵に魔法ダメージ（大）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">5</td>
+<td align="left"><br>物理タイプの味方全体の攻撃力アップ（特大・3ターン）<br>先頭の敵に魔法ダメージ（小）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>良家のお嬢様堕天使。堕天してからは無一文だったが、持ち前の資産運用の知識をフル活用し地上でも繫栄を取り戻すことに成功。ただし彼女の味覚に関してはぶっ飛びすぎていて、既存の料理には調味料をとにかくたくさんかけないと満足できない程。おっぱいがデカい。</p>
+          </div>
+
+<p>ムルムルの魔法・マイナーチェンジ版と言っても差支えない性能のサポーター。スキルのリキャストが3のため、バフの持続のしやすさで言えばムルムルよりも秀でています。</p>
+<h4 id="防御力ダウン（物理）"><a href="#防御力ダウン（物理）" class="headerlink" title="防御力ダウン（物理）"></a>防御力ダウン（物理）</h4><h5 id="【★3】スコクス"><a href="#【★3】スコクス" class="headerlink" title="【★3】スコクス"></a>【★3】スコクス</h5><p><img src="/routehachi_blog/medias/images/an22.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">4</td>
+<td align="left">先頭の敵に物理ダメージ（小）<br> 先頭の敵に沈黙を付与（1ターン）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">3</td>
+<td align="left">先頭の敵に物理ダメージ（大）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">6</td>
+<td align="left">先頭の敵に物理ダメージ（特大）<br>先頭の敵の物理防御力ダウン（特大・2ターン）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>怪盗シャンとして影で活躍する堕天使。日常でも困ってる人を持ち前の技術で助けてあげたいが、怪盗であることがバレたらと言動や行動には人一倍慎重である（結果バレそうなのが殆どなのだが…）。かわいい。</p>
+          </div>
+
+<p>すばやさを活かしてスキル1で沈黙付与、SPスキルで物理防御特大ダウンと、魔法タイプの敵相手に相性が良いサポーターです。殆どのアタッカーがスコクスより後に行動するおかげで2ターンデバフはよく効くし、沈黙はここぞのタイミングで発動しやすいのでサポーターとしてはばんばんの性能。他のアタッカー達でSPスキルを連発する等で一気に畳みかけたい時に重宝します。</p>
+<h4 id="防御力ダウン（魔法）"><a href="#防御力ダウン（魔法）" class="headerlink" title="防御力ダウン（魔法）"></a>防御力ダウン（魔法）</h4><h5 id="【★3】アスタロト"><a href="#【★3】アスタロト" class="headerlink" title="【★3】アスタロト"></a>【★3】アスタロト</h5><p><img src="/routehachi_blog/medias/images/an23.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">5</td>
+<td align="left">敵全体の魔法防御力ダウン（中・3ターン）<br>敵全体に魔法ダメージ（中）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">2</td>
+<td align="left">先頭の敵に魔法ダメージ（大）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">5</td>
+<td align="left">先頭の敵の魔法防御力ダウン（大・3ターン）<br>先頭の敵に魔法ダメージ（大）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の攻撃力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>彼女が有する辺境の領で農業を営む、物腰が柔らかい堕天使。おっぱいがデカい。なお、バストサイズは数値だけで見ると実装キャラの中ではトップクラス。<del>豊作である</del></p>
+          </div>
+
+<p>スキル１とSPスキルで定期的に敵全体に魔法防御デバフを与え続けるタイプのサポーター。加えてすばやさもかなり高い部類で、デバフを与えた後は準アタッカーとしても活躍できます。また、主人公のスキルリンクのベース枠としても適任で、<strong>高いすばやさを活かしてすばやさが低いキャラについていたスキルを最大限に活かす</strong>といった運用が可能です。（バロールのスキル2等、状態異常付与系のスキルでは特に有用です）</p>
+<h4 id="物理攻撃バリア"><a href="#物理攻撃バリア" class="headerlink" title="物理攻撃バリア"></a>物理攻撃バリア</h4><h5 id="【★3】麒麟"><a href="#【★3】麒麟" class="headerlink" title="【★3】麒麟"></a>【★3】麒麟</h5><p><img src="/routehachi_blog/medias/images/an26.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">4</td>
+<td align="left">先頭の敵に物理ダメージ（中）<br>味方全体の物理防御力アップ（中・2ターン）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">4</td>
+<td align="left">先頭の敵に物理ダメージ（中）<br>先頭の味方のHP回復（小）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">6</td>
+<td align="left">先頭の敵に物理ダメージ（中）<br>味方全体に物理バリア付与（大・3ターン）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の物理防御力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>中華飯店で給仕をしていて、お客様のフィードバックも欠かさない、人々の笑顔のために頑張る堕天使。おっぱいがデカい。</p>
+          </div>
+
+<p>物理バリアを付与できるサポーター。バリア発動中は一定量のダメージをカットしてくれるので、敵が大技を仕掛ける前にバリアを展開すれば一時しのぎになってくれます。ただしリキャストが6と重いので、発動タイミングは見極めたいですね。</p>
+<p>麒麟の魔法バリア版としてグシオンがいますが、あちらのほうは魔法バリア発動のデメリットとして自身に2ターン麻痺がかかってしまうという困った副作用があります。（ただしリキャストは低め）</p>
+<h3 id="タンク"><a href="#タンク" class="headerlink" title="タンク"></a>タンク</h3><p>基本的にパーティの一番前に位置し、敵のダメージを受け止める役職です。ゲーム序盤はタンクがいなくてもなんとかなるようなステージもちらほらありますが、中盤以降は敵の攻撃も激しくなってくるので編成に1人は組んでおきたいですね。</p>
+<h4 id="物理"><a href="#物理" class="headerlink" title="物理"></a>物理</h4><h5 id="【★3】アスモデウス"><a href="#【★3】アスモデウス" class="headerlink" title="【★3】アスモデウス"></a>【★3】アスモデウス</h5><p><img src="/routehachi_blog/medias/images/an24.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">3</td>
+<td align="left">先頭の敵に物理ダメージ（小）<br>物理防御力アップ（大・3ターン）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">3</td>
+<td align="left">ヘイトUP（3・2ターン）<br>先頭の敵に物理ダメージ（中）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">5</td>
+<td align="left">先頭の敵に物理ダメージ（小）<br>ヘイトUP（4・2ターン）<br>自分のHP回復（小）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の物理防御力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>魔物退治や町の見回りの活動を主とする団体、「イノセントナイツ」に所属する堕天使。目の前の事象が脳内でスケベな事に置換されあれこれ想像してしまう困った癖がある。喋らなければ美人なのだが…　実はおっぱいがデカい。</p>
+          </div>
+
+<p>物理攻撃を受け止めることに特化したタンク。スキル2やSPスキルで自身のヘイトを上げて、相手の特定ポジ狙いの攻撃を引き受けることが可能です（ただし範囲攻撃は引き受けられません）。ただし、魔法攻撃に関してはからっきしなので、後述のベルフェゴールを代わりに編成に入れましょう。<br>勝ち抜き戦メダルの交換対象なので、ガチャで引けなくてもいつかは必ず入手できるのも強みです。</p>
+<p>ちなみにヘイトUPの横に表記してある数値は、敵の攻撃を何回引き受けることができるかを表しています。</p>
+<h4 id="魔法"><a href="#魔法" class="headerlink" title="魔法"></a>魔法</h4><h5 id="【★3】ベルフェゴール"><a href="#【★3】ベルフェゴール" class="headerlink" title="【★3】ベルフェゴール"></a>【★3】ベルフェゴール</h5><p><img src="/routehachi_blog/medias/images/an25.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">3</td>
+<td align="left">先頭の敵に魔法ダメージ（小）<br>ヘイトUP（4・2ターン）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">5</td>
+<td align="left">敵全体に魔法ダメージ（中）<br>自分のHP回復（中）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">5</td>
+<td align="left">先頭の敵に魔法ダメージ（中）<br>味方全体の魔法防御アップ（小・3ターン）<br>自分の魔法防御アップ（中・2ターン）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の魔法防御力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>騎士（主人公）を一目見たその日から、騎士に尽くされたいと積極的に行動するタイプの堕天使。恋の順序を飛ばしがちなことに定評がある。おっぱいがデカい。</p>
+          </div>
+
+<p>アスモデウスの魔法版と言える性能のタンク。ヘイト取りの頻度はアスモデウスよりも少ないですが、代わりに味方全体の耐久力を伸ばすこともできるといった性能になっています。もちろん物理攻撃に関しては全然なので適切に運用しましょう。<br>こちらは緊急クエストメダルの交換対象で、こちらもガチャで引けなくてもいつかは必ず入手できるようになっています。</p>
+<h3 id="ヒーラー"><a href="#ヒーラー" class="headerlink" title="ヒーラー"></a>ヒーラー</h3><p>味方のHPを回復することに特化した役職。バトル中はスキルでの回復以外に回復手段が無いため、耐久力や一部特性の維持の為に1人は入れておきたいところです。</p>
+<h4 id="単体回復特化"><a href="#単体回復特化" class="headerlink" title="単体回復特化"></a>単体回復特化</h4><h5 id="【★2】ラマシュトゥ"><a href="#【★2】ラマシュトゥ" class="headerlink" title="【★2】ラマシュトゥ"></a>【★2】ラマシュトゥ</h5><p><img src="/routehachi_blog/medias/images/an27.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">4</td>
+<td align="left">先頭の敵に物理ダメージ（中）<br>HPが最も低い味方1人のHPを回復（小）<br> HPが最も低い味方1人の魔法防御アップ（小・2ターン）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">2</td>
+<td align="left">先頭の敵に物理ダメージ（2回）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">5</td>
+<td align="left">先頭の敵に物理ダメージ（中）<br>HPが最も低い味方1人のHPを回復（大）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の物理防御力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>ゴートウルフで看護師をやっている献身的な堕天使。おっぱいがデカい。</p>
+          </div>
+
+<p>スキル1とSPスキルで定期的に単体回復を行うタイプのヒーラー。1回の回復量が大きいので、窮地での立て直しに貢献しやすいです。<br>ちなみにこのゲームにおいて「HPが最も低い味方」というのは、HP割合を参照するのではなく、「<a target="_blank" rel="noopener" href="https://angelic.wikiru.jp/?%E3%83%90%E3%83%88%E3%83%AB#d050de24">割合関係なく、パーティ内で現在HPの値が最も少ない1人</a>」を対象にするように作られています。目盛りだけで判断すると思わぬキャラを回復してしまうことがあるので、回復タイミングには注意が必要です。</p>
+<h5 id="【★2】ベレト"><a href="#【★2】ベレト" class="headerlink" title="【★2】ベレト"></a>【★2】ベレト</h5><p><img src="/routehachi_blog/medias/images/an28.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">4</td>
+<td align="left">先頭の敵に魔法ダメージ（中）<br>HPが最も低い味方1人のHPを回復（中）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">2</td>
+<td align="left">先頭の敵に魔法ダメージ（2回）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">6</td>
+<td align="left">先頭の敵に魔法ダメージ（中）<br>先頭の味方のHPを回復（大）<br> 先頭の味方の麻痺を回復</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の魔法防御力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>ゴートウルフで恋が実る瞬間を祝うことに悦びを覚える堕天使。些細な事でも恋の成就に結びつける困った癖がある。ぷおぉぉぉぉぉぉ！</p>
+          </div>
+
+<p>ラマシュトゥのマイナーチェンジ版といった感じのヒーラー。スキル1の回復量はラマシュトゥより上な代わりにバフなし、SPスキルはリキャストが重くなった代わりに必ず先頭の味方を回復できるといった違いがあります。特にスキル1の汎用性は高く、主人公のスキルリンクにしてもいい感じです。</p>
+<h4 id="範囲回復特化"><a href="#範囲回復特化" class="headerlink" title="範囲回復特化"></a>範囲回復特化</h4><h5 id="【★1】ベリアル"><a href="#【★1】ベリアル" class="headerlink" title="【★1】ベリアル"></a>【★1】ベリアル</h5><p><img src="/routehachi_blog/medias/images/an29.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">3</td>
+<td align="left">敵全体に魔法ダメージ（中）<br>HPが最も低い味方1人のHPを回復（小）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">2</td>
+<td align="left">先頭の敵に魔法ダメージ（中）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">4</td>
+<td align="left">先頭の敵に魔法ダメージ（中）<br>HPが低い順に味方2人のHPを回復（小）</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の魔法防御力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>もともとは名家出身の堕天使でいろいろあって没落してしまい、夜逃げのような形で地上へ堕天してきた。身を隠したい為に長らく森でサバイバル生活を送っていたので、雑草の知識が人一倍備わっている。騎士に救われた後は感謝の気持ちとして、騎士に対して他の人達に負けないくらいの好意を抱くようになる。愛は意外と重く、<del>事あるごとに他の人達を雑草料理でねじ伏せる</del>。ちっちゃくて愛くるしくてたまらんです（私感）</p>
+          </div>
+
+<p>リキャストが全体的に軽くルシフェルのように毎ターンスキルが撃てて、スキル1とSPスキルで少しずつ皆のHPを回復していく（過剰回復になりにくい）効率タイプのヒーラー。ヒーラーで困ったら彼女を編成に入れておけばとりあえず活躍できる汎用性の高さがうり。<br>また、自身はほぼ最後尾に位置するので攻撃の対象になりにくく、最悪キャラLvとスキルLvだけでも上げておけばヒーラーとして普通に運用できるのも強み（食材集めを急ぐ必要がない）。</p>
+<h5 id="【★3】ヴァッサゴ"><a href="#【★3】ヴァッサゴ" class="headerlink" title="【★3】ヴァッサゴ"></a>【★3】ヴァッサゴ</h5><p><img src="/routehachi_blog/medias/images/an30.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<table>
+<thead>
+<tr>
+<th align="center">スキル</th>
+<th align="center">リキャスト</th>
+<th align="left">効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">スキル1</td>
+<td align="center">4</td>
+<td align="left">先頭の敵に魔法ダメージ（中）<br>味方全体のすばやさアップ（2ターン）<br> HPが最も低い味方1人のHPを回復（小）</td>
+</tr>
+<tr>
+<td align="center">スキル2</td>
+<td align="center">2</td>
+<td align="left">敵全体に魔法ダメージ（中）</td>
+</tr>
+<tr>
+<td align="center">SPスキル</td>
+<td align="center">6</td>
+<td align="left">敵全体に魔法ダメージ（中）<br>味方全体のHPを回復（小）<br>味方全体の沈黙を回復</td>
+</tr>
+<tr>
+<td align="center">特性</td>
+<td align="center">-</td>
+<td align="left">戦闘開始時、自分の魔法防御力を小アップ</td>
+</tr>
+</tbody></table>
+<div class="note note-info">
+            <p>頑張る若者を陰から応援するタイプの堕天使。アドバイスが人一倍上手く、彼女の一言が今日もゴートウルフの人々を奮い立たせている…かもしれない。おっぱいがデカいからかも。</p>
+          </div>
+
+<p>全体回復持ちのヒーラー。スキル1ではパーティ全体のすばやさを上げ、味方内での行動順を崩すことなく敵より早く動けるようにできるのが強み。範囲攻撃を多用するボス戦で編成に入れる価値があります。</p>
+<h2 id="おわりに"><a href="#おわりに" class="headerlink" title="おわりに"></a>おわりに</h2><p>いかがでしたでしょうか。エンクリ始めたいけど右も左も分からなくて…という方の手助けになりましたら幸いです。<br>余力があれば別記事にて、エンクリフェス・天聖フェスのおすすめキャラを書いてみようと思います～</p>
+<blockquote>
+<p>この記事は <a target="_blank" rel="noopener" href="https://adventar.org/calendars/7364">mstdn.maud.io Advent Calendar 2022</a> の20日目の記事です。 明日はしおりっちさんの<a target="_blank" rel="noopener" href="https://shihorich.hatenablog.jp/entry/2022/12/21/230000">個人的VRChat元年</a>です。</p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/routehachi_blog/tags/%E3%82%A8%E3%83%B3%E3%82%B8%E3%82%A7%E3%83%AA%E3%83%83%E3%82%AF%E3%83%AA%E3%83%B3%E3%82%AF/" class="print-no-link">#エンジェリックリンク</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>エンクリ入門 ～異世界生活の手引き～</div>
+      <div>https://routehachi.github.io/routehachi_blog/2022/12/20/anclguide/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>著者</div>
+          <div>routehachi</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>作成日</div>
+          <div>2022年12月20日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>著作権</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/routehachi_blog/2023/03/04/vrc_thumbnail/" title="VRCのアバターサムネイルに画像を差し込む">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">VRCのアバターサムネイルに画像を差し込む</span>
+                        <span class="visible-mobile">前の記事</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>見出し</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">検索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">キーワード</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/routehachi_blog/js/events.js" ></script>
+<script  src="/routehachi_blog/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/routehachi_blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/routehachi_blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/routehachi_blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">ブログは JavaScript を有効にすると最適に機能します</div>
+  </noscript>
+</body>
+</html>

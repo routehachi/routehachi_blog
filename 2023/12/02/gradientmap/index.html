@@ -1,0 +1,646 @@
+
+
+<!DOCTYPE html>
+<html lang="ja" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/routehachi_blog/favicon.png">
+  <link rel="icon" href="/routehachi_blog/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="routehachi">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="この記事は mstdn.maud.io Advent Calendar 2023 の2日目の記事です。昨日はぴけぴけさんのRadeonのお話 ～ mstdn.maud.io Advent Calendar 2023 でした。  こんにちは～　かつてカスメをこねくり回していた者です。 最近は趣味の延長上で色彩検定を受験してみたり、聴く音楽のジャンルがハウスに偏ってたり、バターチキンカレーに憧れてス">
+<meta property="og:type" content="article">
+<meta property="og:title" content="グラデーションマップを使って色改変してみよう">
+<meta property="og:url" content="https://routehachi.github.io/routehachi_blog/2023/12/02/gradientmap/index.html">
+<meta property="og:site_name" content="routehachi">
+<meta property="og:description" content="この記事は mstdn.maud.io Advent Calendar 2023 の2日目の記事です。昨日はぴけぴけさんのRadeonのお話 ～ mstdn.maud.io Advent Calendar 2023 でした。  こんにちは～　かつてカスメをこねくり回していた者です。 最近は趣味の延長上で色彩検定を受験してみたり、聴く音楽のジャンルがハウスに偏ってたり、バターチキンカレーに憧れてス">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/gradcd.png">
+<meta property="article:published_time" content="2023-12-01T15:00:00.000Z">
+<meta property="article:modified_time" content="2023-12-01T14:59:52.602Z">
+<meta property="article:author" content="routehachi">
+<meta property="article:tag" content="Unity">
+<meta property="article:tag" content="備忘録">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://routehachi.github.io/routehachi_blog/medias/images/gradcd.png">
+  
+  
+  
+  <title>グラデーションマップを使って色改変してみよう - routehachi</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/routehachi_blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/routehachi_blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/routehachi_blog/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"routehachi.github.io","root":"/routehachi_blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/routehachi_blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/routehachi_blog/js/utils.js" ></script>
+  <script  src="/routehachi_blog/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/routehachi_blog/">
+      <strong>UronBoard</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/routehachi_blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>ホーム</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/routehachi_blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>プロフィール</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/routehachi_blog/medias/banner.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">グラデーションマップを使って色改変してみよう</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        routehachi
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-12-02 00:00" pubdate>
+          2023年12月2日 午前
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          941 単語
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          8 分
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">グラデーションマップを使って色改変してみよう</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>この記事は <a target="_blank" rel="noopener" href="https://adventar.org/calendars/8566">mstdn.maud.io Advent Calendar 2023</a> の2日目の記事です。昨日はぴけぴけさんの<a target="_blank" rel="noopener" href="https://blog.pikegadge.com/a-don-vent-calendar2023/">Radeonのお話 ～ mstdn.maud.io Advent Calendar 2023</a> でした。</p>
+</blockquote>
+<p>こんにちは～　かつてカスメをこねくり回していた者です。</p>
+<p>最近は趣味の延長上で色彩検定を受験してみたり、聴く音楽のジャンルがハウスに偏ってたり、バターチキンカレーに憧れてスパイス買い揃えてカレーを作ったり、可愛い3Dモデルのアバターを改変したりして過ごしています。<del>沼が多い</del></p>
+<p>今回は「個性を出すためにアバターの髪色や瞳、衣装の色などを変えてみたいけど、色相・彩度・明度を弄っただけだと思った色にならない…」って感じで悩んでる方に、影色までまとめて色を差し込めるグラデーションマップが役に立つから使ってみようぜ！ということで、VRChatユーザー向けにグラデーションマップの解説記事を書きました。<del>けっこうフィーリングな所もあるけど許して</del></p>
+<h2 id="用意するもの"><a href="#用意するもの" class="headerlink" title="用意するもの"></a>用意するもの</h2><ul>
+<li>任意のアバターのデータ（本記事ではポンデロニウム研究所さんの<a target="_blank" rel="noopener" href="https://ponderogen.booth.pm/items/3681787">桔梗</a>ちゃんを使用します）</li>
+<li>グラデーションマップ機能のある、任意のペイントソフト（本記事ではSerif社のAffinity Photoちゃんを使用します）</li>
+</ul>
+<p>※　ペイントソフトはpsdファイルを読み込めてかつある程度互換性があるものが理想ですが、なければ最悪pngでも大丈夫です（後述）。</p>
+<h2 id="下準備"><a href="#下準備" class="headerlink" title="下準備"></a>下準備</h2><h3 id="ペイントソフトに改変したいテクスチャのPSDファイルを読み込む"><a href="#ペイントソフトに改変したいテクスチャのPSDファイルを読み込む" class="headerlink" title="ペイントソフトに改変したいテクスチャのPSDファイルを読み込む"></a>ペイントソフトに改変したいテクスチャのPSDファイルを読み込む</h3><div class="note note-warning">
+            <p>Photoshop以外のソフトで読み込む場合、元のpsdファイルでクリッピングレイヤー等が存在するとpsdを上手く読み込むことができない場合があります。</p>
+          </div>
+
+<h3 id="改変したい部分のレイヤーにグラデーションマップの調整レイヤーを差し込む"><a href="#改変したい部分のレイヤーにグラデーションマップの調整レイヤーを差し込む" class="headerlink" title="改変したい部分のレイヤーにグラデーションマップの調整レイヤーを差し込む"></a>改変したい部分のレイヤーにグラデーションマップの調整レイヤーを差し込む</h3><p><img src="/routehachi_blog/medias/images/grad01.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>今回は髪の色を変えたいので、「髪」のレイヤーだけが対象になるように調整レイヤーを差し込みます。</p>
+<div class="note note-info">
+            <p>もし改変したいテクスチャのpsdファイルがなくpngファイル等を用いたり、目当ての部分のレイヤー分けがされてないといった場合は、調整レイヤーに選択範囲で作ったマスクをかけてあげることでかろうじてパーツ別にグラデーションマップをかけることができます。</p>
+          </div>
+
+<h2 id="グラデーションマップについて"><a href="#グラデーションマップについて" class="headerlink" title="グラデーションマップについて"></a>グラデーションマップについて</h2><p>グラデーションマップとは、レイヤーに描画されている色の明るさを参照し、その色を設定したグラデーションをもとに置き換える機能です。イラストの分野だと、グリザイユ画法で着色やルック調整を行う際に頻繁に用いられたりします。</p>
+<p><img src="/routehachi_blog/medias/images/grad02.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="例えばグレースケールの画像に着色できる（元画像がグレースケールでなくてもOK）"><br><img src="/routehachi_blog/medias/images/grad03.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="青系の色の着色例">  </p>
+<p><img src="/routehachi_blog/medias/images/grad04.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="グラデーションの右側が高い明度の色に、左側が暗い明度の色に割り当てられる（Affinity Photoの場合）"> </p>
+<p>もしベースカラーと影色のレイヤーが統合されていても、この方法で任意の色で上書きできるというのがグラデーションマップの強みです。</p>
+<div class="note note-info">
+            <p>明度を参照するので、例えば瞳では上部に描く照り返しの色とベースの瞳色の明度が被って上手く着色できないケースもあります。髪や肌などの単色ものであれば99%大丈夫です！</p>
+          </div>
+
+
+<h2 id="グラデーションマップで元の色を再現する"><a href="#グラデーションマップで元の色を再現する" class="headerlink" title="グラデーションマップで元の色を再現する"></a>グラデーションマップで元の色を再現する</h2><p>実際にグラデーションマップで髪色を変える前に、元の髪色をできるだけ再現できるようなグラデーションマップを作ってテンプレにします。<br>髪色を変える際にグラデーションの目安を作っておくことで、体感的に別の色をあてやすくなります。</p>
+<p>まず、グラデーションのマップの調整レイヤーを非表示にし、元の髪色のベースカラー（明るい部分）と、影色の一番暗い部分の色をグラデーションの両端に割り当てます。</p>
+<p><img src="/routehachi_blog/medias/images/grad05.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="影色は選定が難しいので、「これ暗いなあ…」と思った色を選ぶ感じで大丈夫です">  </p>
+<p>調整レイヤーの非表示を外し、色の割り当て具合を確認します。グラデーションの位置と色の持つ明度が一致せず、割り当てられて欲しい色が上手く割り当てられてないので、これを直していきます。</p>
+<p><img src="/routehachi_blog/medias/images/grad06.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="両端に色を当てただけの状態。明度0の位置に明度50くらいの色があるので、割り当てが明るい色寄りになってしまっている。同様に反対側も、明度100の位置に明度90くらいの色があるので、若干暗めの色が割り振られてしまっている"> </p>
+<p>まず、割り当てた2色をそれぞれ複製し、元の影色の滑らかさを損なわない程度に位置を動かします。</p>
+<p><img src="/routehachi_blog/medias/images/grad07.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="2色をそれぞれ複製して、適切に色が割り当てられるように位置を変えた状態。元のテクスチャに近い状態になったがのっぺり気味"> </p>
+<div class="note note-warning">
+            <p>位置をずらしすぎると、影色の滑らかな部分が潰れてしまいます。髪の生え際付近などに注意！</p>
+          </div>
+
+<p><img src="/routehachi_blog/medias/images/grad08.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="影色を寄せすぎて、暗い部分が潰れてしまった例"><br><img src="/routehachi_blog/medias/images/grad09.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="反対にベースカラーを寄せすぎて、明るい部分が潰れてしまった例"> </p>
+<p><a target="_blank" rel="noopener" href="https://www.learnui.design/tools/gradient-generator.html">グラデーションが2色だけだと、カラーホイール上では直線状でつながるように色が変わっていく</a>のでどうしても中間点が濁った感じになってしまいます。なので、中間色を設定してあげます。<br>元のテクスチャから中間な感じの色を抽出して適宜配置していき、位置を整えます。中間色の彩度や明度を必要に応じて微調整します。元の色にだいぶ近くなったな～と思ったら完成です！</p>
+<p><img src="/routehachi_blog/medias/images/grad10.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="中間色を2色挟んだ例　元のテクスチャの色にかなり近くなった"> </p>
+<h2 id="好みの色に改変してみる"><a href="#好みの色に改変してみる" class="headerlink" title="好みの色に改変してみる"></a>好みの色に改変してみる</h2><p>ここからは、作ったテンプレを元に色を改変してみます。今回は淡い感じの茶髪に変えてみましょう～<br>まず、これだ！と思ったベースカラーを決めて、グラデーションマップの全部の色に一旦割り当てます。</p>
+<p><img src="/routehachi_blog/medias/images/grad11.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="ベースカラーでべた塗り"> </p>
+<p>次に影色を決めて、グラデーションマップの左から2色に割り当てます。配色の調和を確認して納得したら、一旦中間色を削除して影色の付き具合を確認します。</p>
+<p><img src="/routehachi_blog/medias/images/grad12.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="影色を足して中間色のポイントを削除。影色の潰れをここで直しておく"> </p>
+<p>影色の決め方ですが、慣れないうちはナチュラルハーモニーを意識すると上手くいきやすいです。<br>これは、「自然光で物体が照らされていると、明るいところは黄みに寄って、陰の部分は青紫に寄って見える」という原理に沿った配色で、HSLスライダーでベースカラーの明度を落として色相を青紫寄りに15前後程動かすことでそれっぽいのを作ることができます。（色相によっては彩度の調整も必要です）</p>
+<p><img src="/routehachi_blog/medias/images/grad21.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="前作った図解をアレンジしてお届けしています"> </p>
+<p>最後に中間色を足してみて、元のテクスチャと比較して上手くいったな～と思ったら完成です！</p>
+<p><img src="/routehachi_blog/medias/images/grad13.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="白みが足りないと感じたので、ベースカラーより明るい位置に新規に明るめの色を足すなどした"> </p>
+<p>テクスチャが完成したらUnityに持っていき、Materialのテクスチャを今作ったものに替えて、マテリアル側の影色などを調整します。</p>
+<ul>
+<li>眉や睫毛も髪色に馴染むように改変します。髪色に使ったグラデーションマップをそのままコピーして使い、位置だけ変えて調整すると楽です。</li>
+<li>瞳も改変します（今回はプリセットの瞳色を「明るさ&#x2F;コントラスト」の調整レイヤーで明るめにし、さらにマスクを適用した「HSLシフト」の調整レイヤーで瞳の真ん中から上にかけてどんどん紫寄りの色になりながら暗くなるようにしました）</li>
+</ul>
+<p>色の雰囲気に合うように顔のシェイプを若干調整したりして、理想の改変が出来たら完成です！</p>
+<p><img src="/routehachi_blog/medias/images/grad14.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="デフォルトのマテリアルの影色だと青みが強くて合わないので、影の強さやコントラストを調整した"> </p>
+<h2 id="他の色にも変えてみた"><a href="#他の色にも変えてみた" class="headerlink" title="他の色にも変えてみた"></a>他の色にも変えてみた</h2><h3 id="ブロンドヘアー"><a href="#ブロンドヘアー" class="headerlink" title="ブロンドヘアー"></a>ブロンドヘアー</h3><p>みんな大好き（？）、淡い感じのブロンドヘアーです。<br>最も明るいとこの色相は黄色にして、影色になるにつれて色相を赤にずらしていくといい感じかも…？</p>
+<p><img src="/routehachi_blog/medias/images/grad15.png" srcset="/routehachi_blog/img/loading.gif" lazyload><br><img src="/routehachi_blog/medias/images/grad16.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<h3 id="ホワイトヘアー"><a href="#ホワイトヘアー" class="headerlink" title="ホワイトヘアー"></a>ホワイトヘアー</h3><p>銀髪です。とりあえず真っ白から灰！ってすると冷たい印象があるので、オフホワイトから始めてグレーになるにつれてわずかに彩度を足してあげるようにするといい感じに温かみが出てくると思います。<del>白って200色あんねん</del></p>
+<p><img src="/routehachi_blog/medias/images/grad17.png" srcset="/routehachi_blog/img/loading.gif" lazyload><br><img src="/routehachi_blog/medias/images/grad18.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<h3 id="やや暗めのブラウンヘアー"><a href="#やや暗めのブラウンヘアー" class="headerlink" title="やや暗めのブラウンヘアー"></a>やや暗めのブラウンヘアー</h3><p>上2つはどちらとも、元のテクスチャに忠実な（？）淡い色でしたが、慣れれば暗めの色も差し込めます。<br>暗めの色は中々作るのが難しく、Unityに持っていった時にくどいなーと思ったらシェーダー側でテクスチャの彩度を若干下げてもいいかもしれません。リムライトの白を強くしたりするとメリハリが出て良いかも？</p>
+<p><img src="/routehachi_blog/medias/images/grad19.png" srcset="/routehachi_blog/img/loading.gif" lazyload><br><img src="/routehachi_blog/medias/images/grad20.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<h2 id="おわり"><a href="#おわり" class="headerlink" title="おわり"></a>おわり</h2><p>いかがでしたでしょうか！<br>グラデーションマップを使えば元のテクスチャの影の塗りを損なうことなく色の改変を行うことができるので、ぜひ皆さんも挑戦してみてください～</p>
+<blockquote>
+<p>この記事は <a target="_blank" rel="noopener" href="https://adventar.org/calendars/8566">mstdn.maud.io Advent Calendar 2023</a> の2日目の記事です。明日はkb10uyさんです。</p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/routehachi_blog/tags/Unity/" class="print-no-link">#Unity</a>
+      
+        <a href="/routehachi_blog/tags/%E5%82%99%E5%BF%98%E9%8C%B2/" class="print-no-link">#備忘録</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>グラデーションマップを使って色改変してみよう</div>
+      <div>https://routehachi.github.io/routehachi_blog/2023/12/02/gradientmap/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>著者</div>
+          <div>routehachi</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>作成日</div>
+          <div>2023年12月2日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>著作権</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/routehachi_blog/2023/03/04/vrc_thumbnail/" title="VRCのアバターサムネイルに画像を差し込む">
+                        <span class="hidden-mobile">VRCのアバターサムネイルに画像を差し込む</span>
+                        <span class="visible-mobile">次の記事</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>見出し</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">検索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">キーワード</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/routehachi_blog/js/events.js" ></script>
+<script  src="/routehachi_blog/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/routehachi_blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/routehachi_blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/routehachi_blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">ブログは JavaScript を有効にすると最適に機能します</div>
+  </noscript>
+</body>
+</html>

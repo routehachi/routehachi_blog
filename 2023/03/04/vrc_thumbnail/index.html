@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+<html lang="ja" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/routehachi_blog/favicon.png">
+  <link rel="icon" href="/routehachi_blog/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="routehachi">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="サムネイルに使用する画像を用意する  画像を用意して、任意のAssetsフォルダに画像を突っ込みます。 画像のインポート設定  Texture TypeをSprite (2D and UI) 、FormatをRGBA 32 bit にします。 Canvasを用意してImageを差し込む  Hierarchy上にCanvasを作成します（UI -&gt; Image）。   Canvasの子になって">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VRCのアバターサムネイルに画像を差し込む">
+<meta property="og:url" content="https://routehachi.github.io/routehachi_blog/2023/03/04/vrc_thumbnail/index.html">
+<meta property="og:site_name" content="routehachi">
+<meta property="og:description" content="サムネイルに使用する画像を用意する  画像を用意して、任意のAssetsフォルダに画像を突っ込みます。 画像のインポート設定  Texture TypeをSprite (2D and UI) 、FormatをRGBA 32 bit にします。 Canvasを用意してImageを差し込む  Hierarchy上にCanvasを作成します（UI -&gt; Image）。   Canvasの子になって">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/vrcthumb9.png">
+<meta property="article:published_time" content="2023-03-04T11:00:00.000Z">
+<meta property="article:modified_time" content="2023-11-29T19:28:10.320Z">
+<meta property="article:author" content="routehachi">
+<meta property="article:tag" content="備忘録">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://routehachi.github.io/routehachi_blog/medias/images/vrcthumb9.png">
+  
+  
+  
+  <title>VRCのアバターサムネイルに画像を差し込む - routehachi</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/routehachi_blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/routehachi_blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/routehachi_blog/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"routehachi.github.io","root":"/routehachi_blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/routehachi_blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/routehachi_blog/js/utils.js" ></script>
+  <script  src="/routehachi_blog/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/routehachi_blog/">
+      <strong>UronBoard</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/routehachi_blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>ホーム</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/routehachi_blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>プロフィール</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/routehachi_blog/medias/banner.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">VRCのアバターサムネイルに画像を差し込む</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        routehachi
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-03-04 20:00" pubdate>
+          2023年3月4日 午後
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          364 単語
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          4 分
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">VRCのアバターサムネイルに画像を差し込む</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="サムネイルに使用する画像を用意する"><a href="#サムネイルに使用する画像を用意する" class="headerlink" title="サムネイルに使用する画像を用意する"></a>サムネイルに使用する画像を用意する</h2><p><img src="/routehachi_blog/medias/images/urontest.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>画像を用意して、任意のAssetsフォルダに画像を突っ込みます。</p>
+<h3 id="画像のインポート設定"><a href="#画像のインポート設定" class="headerlink" title="画像のインポート設定"></a>画像のインポート設定</h3><p><img src="/routehachi_blog/medias/images/vrcthumb1.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p><strong>Texture Type</strong>を<strong>Sprite (2D and UI)</strong> 、<br><strong>Format</strong>を<strong>RGBA 32 bit</strong> にします。</p>
+<h2 id="Canvasを用意してImageを差し込む"><a href="#Canvasを用意してImageを差し込む" class="headerlink" title="Canvasを用意してImageを差し込む"></a>Canvasを用意してImageを差し込む</h2><p><img src="/routehachi_blog/medias/images/vrcthumb10.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>Hierarchy上にCanvasを作成します（UI -&gt; Image）。</p>
+<p><img src="/routehachi_blog/medias/images/vrcthumb6.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>Canvasの子になっているImageを選択して、</p>
+<p><strong>Pos X</strong>及び<strong>Pos Y</strong>を<strong>0</strong>に、<br><strong>Width</strong>及び<strong>Height</strong>をそれぞれ<strong>画像の縦横の数値と同じもの</strong>に、<br>Imageコンポーネントの<strong>Source Image</strong>に<strong>先程インポートした画像</strong>を設定します。</p>
+<h3 id="Canvasのレンダーモード等の設定"><a href="#Canvasのレンダーモード等の設定" class="headerlink" title="Canvasのレンダーモード等の設定"></a>Canvasのレンダーモード等の設定</h3><p><img src="/routehachi_blog/medias/images/vrcthumb11.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>次にCanvasを選択し、<br>Canvasコンポーネントの<strong>Render Mode</strong>を<strong>Screen Space - Camera</strong>に設定します。</p>
+<p>これで指定されたカメラにCanvasをまるまる映すことができるようになります。</p>
+<p>また、<br>Canvas Scalerコンポーネントの<strong>UI Scale Mode</strong>を<strong>Scale With Screen Size</strong>に、<br><strong>Reference Resolution</strong>を<strong>画像の縦横の数値と同じもの</strong>に設定します。</p>
+<p>これでVRCCamに映っている物と、実際に出力されるサムネイル画像のスケール感が違う問題を解消します。</p>
+<h2 id="VRCCamにCanvasを映す"><a href="#VRCCamにCanvasを映す" class="headerlink" title="VRCCamにCanvasを映す"></a>VRCCamにCanvasを映す</h2><p>VRChat SDKのウィンドウからいつものようにアバターアップロードを始め、Gameウィンドウにいつもの確認画面を出します。<br>HierarchyのほうにVRCCamが生えているので選択。</p>
+<p><img src="/routehachi_blog/medias/images/vrcthumb4.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p><strong>Culling MaskにUIのチェックが付いてないので付けます</strong>。これで条件的にCanvasを映せるようになります。しかしまだ映りません。</p>
+<p><img src="/routehachi_blog/medias/images/vrcthumb7.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p><strong>Clipping Planes</strong>の<strong>Far</strong>を<strong>1000</strong>くらいに設定します。これでSceneの遠方にあるCanvasを映せるようになります。しかしまだ映りません。</p>
+<p><img src="/routehachi_blog/medias/images/vrcthumb12.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>再びCanvasの設定を開き、<br>Canvasコンポーネントの<strong>Render Camera</strong>を<strong>VRCCam</strong>に設定します。これでようやくVRCCamにCanvasを映せるようになります。</p>
+<p><img src="/routehachi_blog/medias/images/vrcthumb8.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>あとはImageをMove ToolやScale ToolでVRCCamの枠に上手く納めます。<br>Scaleを個別に変えない限り、画像の比率が変わることがありません。やったね！</p>
+<p>そのままだとCanvasの上にアバターが映り込むので、アバターには任意の方法でご退場してもらってください。</p>
+<div class="note note-info">
+            <p>アバターサムネイルのサイズは 400x300(4:3) となっています。</p>
+          </div>
+
+<p><img src="/routehachi_blog/medias/images/vrcthumb13.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>VRCのマイページからアバターのサムネイルを確認し、VRCCamに映っていたものと同じサムネが反映されているか確認します。お疲れ～</p>
+<h2 id="利点"><a href="#利点" class="headerlink" title="利点"></a>利点</h2><ul>
+<li>VRCCamのほうを動かしたり、視野角を調整する必要がない</li>
+<li>画像の比率が変わったり、傾いたりしない（イラストを丁寧に扱える）</li>
+<li>PlaneメッシュにMaterialを…といった手順を踏まずに、かつ元の画像の色を忠実に再現できる（イラストを丁寧に扱える）</li>
+</ul>
+<h2 id="おわり"><a href="#おわり" class="headerlink" title="おわり"></a>おわり</h2><p><del>こんな手順を踏まなくてもVRChatのマイページとかからパッと変えれるようにしてほしい</del><br>VRCSDKのバージョンアップで、コントロールパネルから直接画像を選択してアップロードできるようになりました。この記事はおしまい！</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/routehachi_blog/tags/%E5%82%99%E5%BF%98%E9%8C%B2/" class="print-no-link">#備忘録</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>VRCのアバターサムネイルに画像を差し込む</div>
+      <div>https://routehachi.github.io/routehachi_blog/2023/03/04/vrc_thumbnail/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>著者</div>
+          <div>routehachi</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>作成日</div>
+          <div>2023年3月4日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>著作権</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/routehachi_blog/2023/12/02/gradientmap/" title="グラデーションマップを使って色改変してみよう">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">グラデーションマップを使って色改変してみよう</span>
+                        <span class="visible-mobile">前の記事</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/routehachi_blog/2022/12/20/anclguide/" title="エンクリ入門 ～異世界生活の手引き～">
+                        <span class="hidden-mobile">エンクリ入門 ～異世界生活の手引き～</span>
+                        <span class="visible-mobile">次の記事</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>見出し</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">検索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">キーワード</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/routehachi_blog/js/events.js" ></script>
+<script  src="/routehachi_blog/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/routehachi_blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/routehachi_blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/routehachi_blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">ブログは JavaScript を有効にすると最適に機能します</div>
+  </noscript>
+</body>
+</html>
