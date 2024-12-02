@@ -1,0 +1,667 @@
+
+
+<!DOCTYPE html>
+<html lang="ja" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/routehachi_blog/favicon.png">
+  <link rel="icon" href="/routehachi_blog/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="routehachi">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="この記事は mstdn.maud.io Advent Calendar 2024 の3日目の記事です。昨日は8mitsuさんのStable Diffusion XLで散々遊んでみた結果 でした。  こんにちは～色彩検定の勉強も落ち着き、また何か学んでみたいなあと思っていたところ… pic.twitter.com&#x2F;OWNRhyeJnu&mdash; かのりん🦊 (@kanorin) Februa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第2言語（韓国語）を習得してみる">
+<meta property="og:url" content="https://routehachi.github.io/routehachi_blog/2024/12/03/duolingo-konbu/index.html">
+<meta property="og:site_name" content="routehachi">
+<meta property="og:description" content="この記事は mstdn.maud.io Advent Calendar 2024 の3日目の記事です。昨日は8mitsuさんのStable Diffusion XLで散々遊んでみた結果 でした。  こんにちは～色彩検定の勉強も落ち着き、また何か学んでみたいなあと思っていたところ… pic.twitter.com&#x2F;OWNRhyeJnu&mdash; かのりん🦊 (@kanorin) Februa">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/han01.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/han02.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/han03.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/han04.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/han05.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/han06.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/han07.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/han08.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/duo01.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/duo04.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/duo05.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/duo06.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/duo07.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/duo09.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/duo11.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/han09.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/han10.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/han11.png">
+<meta property="og:image" content="https://routehachi.github.io/routehachi_blog/medias/images/han12.png">
+<meta property="article:published_time" content="2024-12-02T17:00:00.000Z">
+<meta property="article:modified_time" content="2024-12-02T19:52:40.148Z">
+<meta property="article:author" content="routehachi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://routehachi.github.io/routehachi_blog/medias/images/han01.png">
+  
+  
+  
+  <title>第2言語（韓国語）を習得してみる - routehachi</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/routehachi_blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/routehachi_blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/routehachi_blog/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"routehachi.github.io","root":"/routehachi_blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/routehachi_blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/routehachi_blog/js/utils.js" ></script>
+  <script  src="/routehachi_blog/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/routehachi_blog/">
+      <strong>UronBoard</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/routehachi_blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>ホーム</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/routehachi_blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>プロフィール</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/routehachi_blog/medias/banner.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">第2言語（韓国語）を習得してみる</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        routehachi
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-12-03 02:00" pubdate>
+          2024年12月3日 午前
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.6k 単語
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          14 分
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">第2言語（韓国語）を習得してみる</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>この記事は <a target="_blank" rel="noopener" href="https://adventar.org/calendars/10167">mstdn.maud.io Advent Calendar 2024</a> の3日目の記事です。昨日は8mitsuさんの<a target="_blank" rel="noopener" href="https://8mitsu.net/999">Stable Diffusion XLで散々遊んでみた結果</a> でした。</p>
+</blockquote>
+<p>こんにちは～<br>色彩検定の勉強も落ち着き、また何か学んでみたいなあと思っていたところ…</p>
+<blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a target="_blank" rel="noopener" href="https://t.co/OWNRhyeJnu">pic.twitter.com/OWNRhyeJnu</a></p>&mdash; かのりん🦊 (@kanorin) <a target="_blank" rel="noopener" href="https://twitter.com/kanorin/status/1754529748603293836?ref_src=twsrc%5Etfw">February 5, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>ん、なんやここは…！おもろそう！<br>「そういえば音楽やゲームとかで韓国語を聴く機会は何回かあったし、このノリで第二言語を持ってみてもいいのではないか…？」と思い、韓国語の勉強が始まりました。</p>
+<h2 id="入ってみた"><a href="#入ってみた" class="headerlink" title="入ってみた"></a>入ってみた</h2><p><img src="/routehachi_blog/medias/images/han01.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="当時の写真がないので、画像はイメージです"> </p>
+<p>我らのゆうこさんが丁重にお出迎えしてくれました。</p>
+<p><img src="/routehachi_blog/medias/images/han02.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>ここは実在の博物館（国立中央博物館）をモチーフとした日本語話者向けの韓国語学習ワールドで、テーマ別に4つの展示室が用意されています。<br>第1展示室では韓国語の概要、第2展示室ではハングルの読み方、第3展示室では単語、そして第4展示室では文法という感じで分けられています。</p>
+<h3 id="第1展示室"><a href="#第1展示室" class="headerlink" title="第1展示室"></a>第1展示室</h3><p><img src="/routehachi_blog/medias/images/han03.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>韓国語の概要について解説してあるところです。<br>日本語と文法がほとんど同じ・語順がSOV（主語目的語述語）・文書成分の移動や省略ができる・漢字語がある　等が紹介してあります。<br>ここら辺の知識は断片的に知ってたりしましたが、改めて展示室の資料を読んでみるとなんて親しみやすい言語なんだ…と改めて感心しました。</p>
+<p><img src="/routehachi_blog/medias/images/han04.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="漢字語の紹介。ここらへんボーナスステージみある"> </p>
+<p>韓国はもともと漢字を使っていたので、漢字語が存在しています。<br>1つの漢字に対して音読みが基本的に1つだけなので覚えやすい！お得！<br>何かの単語を知るたびに「これは何の漢字から来てるんだろう…？」と考えてみるのも楽しいです。</p>
+<h3 id="第2展示室"><a href="#第2展示室" class="headerlink" title="第2展示室"></a>第2展示室</h3><p><img src="/routehachi_blog/medias/images/han05.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="ボスステージ"> </p>
+<p><img src="/routehachi_blog/medias/images/han06.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="バッカお前…ゆうこさんがついてるだろ"> </p>
+<p>ハングルの概要・読み方について解説してあるところです。<br>韓国語を勉強するにあたって、ほとんどの人が最大の壁だと思っているアレです。<br>覚える際は日本語の50音表に当てはめるのではなく、ローマ字っぽく覚えると納得しやすいかも…？</p>
+<p>子音は ㄱ(g) ㄷ(d) ㅂ(b) ㅅ(s) ㅈ(j) にそれぞれ2-3種のバリエーションがある（濁音っぽいやつ・息を吐くように言うやつ・促音を伴うやつ）、あとは特にバリエーションがない n,h,m,r…って感じでだいたい分類できます。子音がない場合はㅇが入ります。<br>（子音の形は口・舌の象形である…みたいな感じで解説がありますが、いかんせん数が多いのでまずは基本のGDBSJ…GDBSJ…と念仏を唱えていた記憶があります…）<br>母音は日本語と同じでとりあえずアエイオウがあって、そこに母音を2種素早く言うやつとかヤ行とかがある感じ？<br>パッチムにも子音が入ってきます。これに由来する発音変化の種類が多くて覚えるのが大変…（今も全部把握できてません）</p>
+<p><img src="/routehachi_blog/medias/images/han07.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="立ちはだかる発音変化の数々（一部）"> </p>
+<p>英語でもcheck it outをチェキラみたいな感じで言うと思うんですけど、それに相当するのがこの発音変化たちになります。</p>
+<p><img src="/routehachi_blog/medias/images/han08.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="ブラインドタッチしやすそうなキーボード配置"> </p>
+<p>展示室で個人的に感銘を受けたのがこれ！<br>ハングルの一般的なキーボード配置（두벌식&#x2F;二度式）、左半分が子音で右半分が母音という配置で且つそれぞれの行ごとに特定のテーマで固められていてかなり覚えやすいです。例えば子音だと上の行が平音、下の行が激音、真ん中の行がそれ以外　って感じで綺麗に分けられています。（濃音はShiftを押しながら平音を入力）<br>文字の構造上、左側を押したら次は右側を押すことになるので指が運びやすいのもいいですね。</p>
+<h2 id="Duolingoに触れる"><a href="#Duolingoに触れる" class="headerlink" title="Duolingoに触れる"></a>Duolingoに触れる</h2><p>覚えやすそうな言語であるのはわかったので、楽して日々勉強できるようなサムシングがないかと探してたところ、</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">テレビCM始まったよ！見つけたらツイートしてねー <a target="_blank" rel="noopener" href="https://t.co/bSH9GRPmWm">pic.twitter.com/bSH9GRPmWm</a></p>&mdash; Duolingo(デュオリンゴ) | 日本公式🇯🇵 (@Duolingo_Japan) <a target="_blank" rel="noopener" href="https://twitter.com/Duolingo_Japan/status/1824605016075931725?ref_src=twsrc%5Etfw">August 17, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Duolingoが日本語話者向けに韓国語コースを提供していたので早速やり始めました。</p>
+<h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p><img src="/routehachi_blog/medias/images/duo01.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>現時点では全2セクション+デイリーリフレッシュで構成されています。<br>セクション2までは新しい文章や単語を覚えることができて、あとはひたすら復習をする感じになります。</p>
+<p>ちなみに<strong>学習のポイントが掲載されてない</strong>ので、ユニットごとの例文を見て何となく理解する必要があります。英語コースはそこらへんが充実しているのでずるい！</p>
+<h3 id="セクション1"><a href="#セクション1" class="headerlink" title="セクション1"></a>セクション1</h3><p>セクション1は全16ユニットで構成されていて、前半は文字の構成（子音 - 母音 - パッチム）と簡単な単語をひたすら覚えて、後半では挨拶などの定型文、簡単な会話に必要な単語と文章を覚えていきます。</p>
+<h4 id="前半"><a href="#前半" class="headerlink" title="前半"></a>前半</h4><p><img src="/routehachi_blog/medias/images/duo04.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>文字にはそれぞれ文化観光部2000年式でのローマ字表記があります。これが仮にカタカナでの表記だと後で自分で書いてみたり実際に口に出すときに不便なので（主にパッチムの発音の違い）、ここは配慮が感じられるなあと思いました。<br>ほとんどの人が最大の壁だと思っている「文字の読み方が分からない！」を、ここでの千本ノックを経て克服することができるわけですね～</p>
+<p>ただし、없 や 않 などのいわゆる二重パッチムを含む文字はこの時点では扱わないので、後から文章や単語で出てくるもので感覚的に覚えていく、あるいは各自調べていく感じになります。</p>
+<h4 id="後半"><a href="#後半" class="headerlink" title="後半"></a>後半</h4><p><img src="/routehachi_blog/medias/images/duo05.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>文字に一通り触れたら、以降は文章と単語をセクション2修了までひたすら覚えていく感じになります。<br>取り扱う文体はハムニダ体・ヘヨ体・パンマルの3つで、メインはヘヨ体、次にハムニダ体、パンマルは主にセクション2の後半で番外編的な感じで出てきます。ハンダ体は出てこなかったです。<br>セクション1では挨拶などの定型文のほかに「○○は□□です」「○○があります」「○○は何ですか？」などの簡易的な表現が出てきます。</p>
+<p>ただ、先述のとおり学習のポイントは掲載されてないので…</p>
+<p><img src="/routehachi_blog/medias/images/duo06.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="前者は留まる側が言うさようなら、後者は去っていく側が言うさようなら"> </p>
+<ul>
+<li>Duolingoの表記上で同じ意味にされてしまっている単語がある<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="언니, 누나 がどっちも「姉」で済まされている　等">[1]</span></a></sup></li>
+<li>謙譲語の表現について、文章には出るが詳しく教えてくれない<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="저는, 나는 はどっちも「私は」だが前者は謙譲語、後者は非謙譲語 等">[2]</span></a></sup></li>
+<li>変則活用<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="動詞や形容詞の語幹にあたる文字の最後の字が特定のパッチム含む場合、「으」や「아/어」の活用の時にパッチムが脱落したり新しい文字が生えたりするやつ">[3]</span></a></sup>についても詳しく教えてくれない</li>
+<li>助詞の使い分け<sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="「趣味は何ですか？」「名前は何ですか？」の「は」の部分に「는/은」ではなく「가/이」を使う　等">[4]</span></a></sup>についても以下略</li>
+<li>固有数詞と漢数詞の使い分けも以下略</li>
+</ul>
+<p>思いつく感じでこれだけ不便なところがあって、分からないところはWebや本などで調べつつ、<strong>とにかく数をこなして肌で感覚をつかんでいく感じ</strong>になりました。</p>
+<h3 id="セクション2"><a href="#セクション2" class="headerlink" title="セクション2"></a>セクション2</h3><p>セクション2からはユニット数が16から44に増え、一気に学習量が増えてだるそうな印象があります。が、2ユニットほど進める度に形容詞・過去形や未来形・動詞や形容詞の名詞化などの新しい要素を覚えることになるので、量の割には楽しく勉強できました。<br>ここで何ユニットか進めて、その都度音楽や配信や切り抜きを見たりして、脳内でパズルのピースが少しずつ埋まっていく感じを得るのが気持ちいい。</p>
+<h4 id="前半-1"><a href="#前半-1" class="headerlink" title="前半"></a>前半</h4><p><img src="/routehachi_blog/medias/images/duo07.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>文法として基本的な過去形（ヨ体化語幹 + ㅆ어요）や、予定を伝えたい時の未来形（動詞の語幹 + ㄹ&#x2F;을 거예요）、動詞の名詞化（語幹 + 는 것）、否定形（안 + ヨ体）等が出てきました。<br>名詞のバリエーションとして方向や色関連が出てきたり、会話が豊かになりそうな助詞もちらほら。</p>
+<p>未来形は「～と思います」と訳してほしいところですが、Duolingoでは普通のヨ体の場合と同じく「～ます」で訳されるのでややこしかったです。</p>
+<h4 id="後半-1"><a href="#後半-1" class="headerlink" title="後半"></a>後半</h4><p><img src="/routehachi_blog/medias/images/duo09.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>「行ってみました、見に行きます」等の動詞の複合、「～でいらっしゃいますか？」などの尊敬表現、禁止命令<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="「～しないでください」">[5]</span></a></sup>（語幹 + 지 마세요）、義務<sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="「～しなければなりません」">[6]</span></a></sup>（ヨ体化語幹 + 야 해요<sup id="fnref:7" class="footnote-ref"><a href="#fn:7" rel="footnote"><span class="hint--top hint--rounded" aria-label="「ヨ体化語幹 + 야 돼요」もある">[7]</span></a></sup>）、動詞の名詞化2（語幹 + 기）、あとタメ口表現等が出てきます。</p>
+<p><img src="/routehachi_blog/medias/images/duo11.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>終盤では可能（語幹 + ㄹ 수 있어요）、不可能（못 + ヨ体）（語幹 + ㄹ 수 없어요<sup id="fnref:8" class="footnote-ref"><a href="#fn:8" rel="footnote"><span class="hint--top hint--rounded" aria-label="仕方ない事情がある場合にこちらが使われがち">[8]</span></a></sup>）、条件（-(으)면）、確認・許可表現<sup id="fnref:9" class="footnote-ref"><a href="#fn:9" rel="footnote"><span class="hint--top hint--rounded" aria-label="「～しても（したら）いいですか？」等">[9]</span></a></sup>（-돼요,-안 돼요）等の表現が出てきました。これまで習った単語の縮約形<sup id="fnref:10" class="footnote-ref"><a href="#fn:10" rel="footnote"><span class="hint--top hint--rounded" aria-label="特定の代名詞と助詞が合わさるやつ 저는 → 전 等">[10]</span></a></sup>もちらほら。<br>けっこう語彙が増えてきたなーと感じましたが、歌とかを聴いてるとよく出てくる「～してきた」（-던）、「～のように」（-처럼）、「～してくれ」（ヨ体化語幹 + 줘）辺りの文法は最後まで出てこなかったので物足りなさがありました。アップデートでユニットやセクションが新規追加されると…嬉しい！</p>
+<h2 id="博物館に再入場"><a href="#博物館に再入場" class="headerlink" title="博物館に再入場"></a>博物館に再入場</h2><p><img src="/routehachi_blog/medias/images/han09.png" srcset="/routehachi_blog/img/loading.gif" lazyload> </p>
+<p>ある程度語彙が貯まってきたところで第4展示室にお邪魔しにきました（実際はDuolingoで学習してる合間に第3展示室とともに何回かお邪魔してました）<br>ここは文法について解説してあるところです。</p>
+<p><img src="/routehachi_blog/medias/images/han10.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="さては車好きだな？"> </p>
+<p><img src="/routehachi_blog/medias/images/han11.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="ここすき"> </p>
+<p><img src="/routehachi_blog/medias/images/han12.png" srcset="/routehachi_blog/img/loading.gif" lazyload alt="様々な動機があります"> </p>
+<p><a target="_blank" rel="noopener" href="https://social.vivaldi.net/@routehachi/112389363225869808">気が付けばこの子たちの動機もすらすら読めるようになっていました</a>。ありがとうDuolingo。ありがとう韓国語学習博物館。ありがとうかのりんさん。</p>
+<h2 id="今後の予定"><a href="#今後の予定" class="headerlink" title="今後の予定"></a>今後の予定</h2><p>そろそろ韓国語能力試験（TOPIK）を受けてもいいかなーと思っていて、現時点の学習内容だと前者はとりあえず2級<sup id="fnref:11" class="footnote-ref"><a href="#fn:11" rel="footnote"><span class="hint--top hint--rounded" aria-label="日本の級位と異なり、TOPIKでは1級は一番下の級位である（一番上は6級）">[11]</span></a></sup>がとれそうな雰囲気があります。<br>3級以降は作文問題があるのでハードルが高い…（未だに ㅐ と ㅔ の区別に自信がないです）<br>まだまだ勉強が必要ですが、韓国語でドキュメントや宣伝画像が作れたらいいなあとも思っています。</p>
+<h2 id="参考文献など"><a href="#参考文献など" class="headerlink" title="参考文献など"></a>参考文献など</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.kadokawa.co.jp/product/322303002013/">100日でネイティブのように話せる韓国語文法 音声解説付き</a><br>Duolingoで一通り勉強した後、出てこなかった文法を知るために購入。巻末のおまけで変則活用について分かりやすく解説してて良かった。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://hon.gakken.jp/book/1130564200">世界が広がる　推し活韓国語</a><br>オタクっぽい表現やミームを知るために購入。序盤数十ページの熱量がすごい。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://kanki-pub.co.jp/pub/book/9784761276058/">くらべて覚える韓国語</a><br>よく使う単語の背景を知ったり、豊かな表現を覚える為に購入。解説の熱量がすごい。</p>
+</li>
+</ul>
+<blockquote>
+<p>이 기사는 <a target="_blank" rel="noopener" href="https://adventar.org/calendars/10167">mstdn.maud.io Advent Calendar 2024</a>  3일째의 기사입니다. 내일은Giraffe Beer씨 입니다.</p>
+</blockquote>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>언니, 누나 がどっちも「姉」で済まされている　等
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>저는, 나는 はどっちも「私は」だが前者は謙譲語、後者は非謙譲語 等
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span>動詞や形容詞の語幹にあたる文字の最後の字が特定のパッチム含む場合、「으」や「아&#x2F;어」の活用の時にパッチムが脱落したり新しい文字が生えたりするやつ
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span>「趣味は何ですか？」「名前は何ですか？」の「は」の部分に「는&#x2F;은」ではなく「가&#x2F;이」を使う　等
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span>「～しないでください」
+<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span>「～しなければなりません」
+<a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:7" class="footnote-text"><span>「ヨ体化語幹 + 야 돼요」もある
+<a href="#fnref:7" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:8" class="footnote-text"><span>仕方ない事情がある場合にこちらが使われがち
+<a href="#fnref:8" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:9" class="footnote-text"><span>「～しても（したら）いいですか？」等
+<a href="#fnref:9" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:10" class="footnote-text"><span>特定の代名詞と助詞が合わさるやつ 저는 → 전 等
+<a href="#fnref:10" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:11" class="footnote-text"><span>日本の級位と異なり、TOPIKでは1級は一番下の級位である（一番上は6級）
+<a href="#fnref:11" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>第2言語（韓国語）を習得してみる</div>
+      <div>https://routehachi.github.io/routehachi_blog/2024/12/03/duolingo-konbu/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>著者</div>
+          <div>routehachi</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>作成日</div>
+          <div>2024年12月3日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>著作権</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/routehachi_blog/2023/12/02/gradientmap/" title="グラデーションマップを使って色改変してみよう">
+                        <span class="hidden-mobile">グラデーションマップを使って色改変してみよう</span>
+                        <span class="visible-mobile">次の記事</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>見出し</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">検索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">キーワード</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/routehachi_blog/js/events.js" ></script>
+<script  src="/routehachi_blog/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/routehachi_blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/routehachi_blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/routehachi_blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">ブログは JavaScript を有効にすると最適に機能します</div>
+  </noscript>
+</body>
+</html>
